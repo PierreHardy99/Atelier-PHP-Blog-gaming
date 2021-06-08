@@ -19,9 +19,9 @@
 
     function sendImg($photo,$destination){
         if ($destination == "avatar") {
-            $dossier = "../../src/img/avatar";
+            $dossier = "../../src/img/avatar/" . time();
         } else {
-            $dossier = "../../src/img/article";
+            $dossier = "../../src/img/article/" . time();
         }
 
         // Créer un tableau avec les extensions autorisée
@@ -35,6 +35,7 @@
         if (in_array($extensionImage, $extensionArray)) {
             // Préparer le chemin répertoire + nom fichier
             $dossier.=basename($photo["name"]);
+            var_dump($dossier);
             // Envoyer mon fichier
             move_uploaded_file($photo["tmp_name"], $dossier);
         }

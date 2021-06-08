@@ -8,7 +8,12 @@
     estConnecte();
 
     // Définir la variable qui marquera si le mot de passe est correct ou pas
-    (isset($_SESSION["mdpNoOk"]) && $_SESSION["mdpNoOk"] == true)? $mdpNoOk = $_SESSION["mdpNoOk"] : $mdpNoOk = false;
+    if(isset($_SESSION["mdpNoOk"]) && $_SESSION["mdpNoOk"] == true){
+        $mdpNoOk = $_SESSION["mdpNoOk"];
+        $_SESSION["mdpNoOk"] = false;
+    } else {
+        $mdpNoOk = false;
+    }
 
     // Verifier si les inputs sont bien présent(et donc que ma méthode POST à été déclenchée)
     if (isset($_POST['nom']) && !empty($_POST["nom"]) && !empty($_POST["login"])&& !empty($_POST["prenom"]) && !empty($_POST["email"]) && !empty($_POST["mdp"]) && !empty($_POST["mdp2"])) {
@@ -52,15 +57,14 @@
             // boolean de contrôle
             $mdpNoOk = true;
             //  j'active une seession pour indiquer que les mdp sont noOk
-            $_SESSION["mdpNoOk"] = true;
             // Je recharge ma page
             header("location: ../../src/pages/register.php");
             exit();
         }
         // Vérifier si le login ou le mail n'est pas présent dans ma db
-        $bdd = new PDO("mysql:host=localhost;dbname=blog-gaming;charset=utf8","root","");
+        $pdo = connectDB();
         // Check login
-        $requete = $bdd->prepare("SELECT COUNT(*) AS x
+        $requete = $pdo->prepare("SELECT COUNT(*) AS x
                                     FROM users
                                     WHERE login = ?");
         $requete->execute(array($login));
@@ -74,7 +78,7 @@
         }
 
         // Check mail
-        $requete = $bdd->prepare("SELECT COUNT(*) AS x
+        $requete = $pdo->prepare("SELECT COUNT(*) AS x
                                     FROM users
                                     WHERE email = ?");
         $requete->execute(array($email));
@@ -93,7 +97,7 @@
         }
 
         // Mes données sont correctes, elles sont saines, je peux créer mon user
-        createUser($photo, $login, $nom, $prenom, $email, $mdpToSend, $roleId, $sel);
+        createUser($photo, $login, $nom, $prenom, $email, $mdpToSend, $role, $sel);
 
         // Tout s'est bien passé, invite user à se connecter
 ?>
@@ -118,7 +122,10 @@
             echo "<h2>Ce login possède déjà un compte, veuillez vous connecter</h2>";
             $_SESSION["msgLogin"] = false;
         }
-        
+        if ($mdpNoOk == true) {
+            echo '<h2>Les mots de passe ne sont pas identique</h2>';
+            $mdpNoOk = false;
+        }
     ?>
         <table>
             <thead>
@@ -152,12 +159,12 @@
 
                 <tr>
                     <td>Mot de passe:</td>
-                    <td><input type="password" name="mdp" require placeholder="Entrez votre mot de passe" <?php if($mdpNoOk == true){?> class="danger" placeholder="Les mot de passes ne sont pas identiques !"<?php }?>></td>
+                    <td><input type="password" name="mdp" require placeholder="Entrez votre mot de passe"></td>
                 </tr>
 
                 <tr>
                     <td>Mot de passe:</td>
-                    <td><input type="password" name="mdp2" require placeholder="Répétez votre mot de passe" <?php if($mdpNoOk == true){?> class="danger" placeholder="Les mot de passes ne sont pas identiques !"<?php }?>></td>
+                    <td><input type="password" name="mdp2" require placeholder="Répétez votre mot de passe"></td>
                 </tr>
 
                 <tr>
