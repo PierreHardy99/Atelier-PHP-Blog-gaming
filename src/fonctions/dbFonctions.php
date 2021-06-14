@@ -1,18 +1,5 @@
 <?php
-    // Fonction pour log dans la bdd
-    function connectDB(){
-        static $pdo;
-        $dsn = "mysql:host=localhost;dbname=blog-gaming;charset=utf8";
-        $options = [PDO::ATTR_ERRMODE    => PDO::ERRMODE_WARNING, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC ];  
-        $pdo = new PDO($dsn,"root","",$options);
-        if(!$pdo){
-            echo "\nPDO::errorInfo():\n";
-            return false;
-        } else {
-            return $pdo;
-        }
-    }
-
+    require '../../src/fonctions/dbAccess.php';
     // Enregister un nouvel utilisateur dans notre base de donnée
     function createUser($avatar,$login,$nom,$prenom,$email,$mdp,$roleId,$ban){
         $pdo = connectDB();
@@ -66,5 +53,16 @@
         // Si mon script arrive ici, il est sorti de ma boucle sans trouver de user
         header("location: ../../src/pages/login.php?erreur=Identifiant inconnu, veuillez recommencer!");
         exit();
+    }
+
+    function updateImg($fichier){
+        $pdo = connectDB();
+        // Preparer la requete pour update données
+        $requete = $pdo->prepare("UPDATE users
+                                SET avatar = ?
+                                WHERE usersId = ? ");
+
+        $requete->execute(array($fichier,$_SESSION["user"]["id"]));
+        $requete->closeCursor();
     }
 ?>

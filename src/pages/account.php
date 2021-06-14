@@ -3,6 +3,20 @@
     require "../../src/common/template.php";
     require '../../src/fonctions/dbFonctions.php';
     require '../../src/fonctions/mesFonctions.php';
+    echo $_SESSION['user']['photo'];
+    // Traitement du formulaire
+    if (isset($_FILES['fichier'])) {
+        // Appelle ma fonction sendImg
+        $photo = sendImg($_FILES['fichier'],"avatar");
+        // Update l'adresse du nouvel avatar de ma DB
+        updateImg($photo);
+        // Effacer l'avatar de l'utilisateur si celui-ci a déjà un avatar personnalisé
+        if (!$_SESSION['user']['photo'] != "../../src/img/site/defaut_avatar.png") {
+            unlink($_SESSION['user']['photo']);
+        }
+        header("location: ../../src/pages/account.php?maj=true&message=Félicitation votre avatar est mis à jour !");
+        exit();
+    }
 ?>
 
 <section id="account">
@@ -57,10 +71,5 @@
 </section>
 
 <?php 
-    // Traitement du formulaire
-    if (isset($_FILES['fichier'])) {
-        // Appelle ma fonction sendImg
-        $photo = sendImg($_FILES['fichier'],"avatar");
-    }
 require '../../src/common/footer.php';
 ?>
