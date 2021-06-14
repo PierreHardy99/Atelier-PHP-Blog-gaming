@@ -3,7 +3,6 @@
     require "../../src/common/template.php";
     require '../../src/fonctions/dbFonctions.php';
     require '../../src/fonctions/mesFonctions.php';
-    echo $_SESSION['user']['photo'];
     // Traitement du formulaire
     if (isset($_FILES['fichier'])) {
         // Appelle ma fonction sendImg
@@ -11,9 +10,12 @@
         // Update l'adresse du nouvel avatar de ma DB
         updateImg($photo);
         // Effacer l'avatar de l'utilisateur si celui-ci a déjà un avatar personnalisé
-        if (!$_SESSION['user']['photo'] != "../../src/img/site/defaut_avatar.png") {
+        if ($_SESSION['user']['photo'] != "../../src/img/site/defaut_avatar.png" && !empty($_FILE['fichier'])) {
             unlink($_SESSION['user']['photo']);
         }
+        
+        // Je réatribu le chemin du nouvel avatar dans mon $_SESSION user
+        $_SESSION['user']['photo'] = $photo;
         header("location: ../../src/pages/account.php?maj=true&message=Félicitation votre avatar est mis à jour !");
         exit();
     }
@@ -32,6 +34,10 @@
                 <input type="submit" value="Envoyer votre avatar">
             </form>
             <?php
+                // Si la maj image est réussis, afficher le message
+                if (isset($_GET['maj']) && $_GET['maj'] == true) {
+                    echo '<h3>'.$_GET['message'].'</h3>';
+                }
                 }
                 // Message pour féliciter l'upload du formulaire
             ?>

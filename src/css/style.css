@@ -226,14 +226,15 @@ footer p{
     margin: auto;
     background-color: white;
     box-shadow: 0px 0px 10px 3px rgb(0 0 0 / 27%);
+
 }
 
 /* MENU ADMIN */
-
 .gestionAdmin .template .menu{
     display: flex;
     flex-direction: column;
 }
+
 .gestionAdmin .template .menu a{
     text-decoration: none;
     padding: 1rem;
@@ -256,6 +257,7 @@ footer p{
     width: 100%;
     text-align: center;
 }
+
 .gestionAdmin .adminContenu table{
     border: 1px solid black;
     width: 100%;
@@ -268,8 +270,6 @@ footer p{
 .gestionCategorie{
     width: 80%;
     margin: auto;
-    /* display: flex;
-    flex-wrap: wrap; */
     justify-content: space-between;
 }
 

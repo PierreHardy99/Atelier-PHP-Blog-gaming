@@ -44,7 +44,6 @@
                     exit();
                 }
                 else{
-
                     header("location: ../../src/pages/login.php?erreur=Mot de passe incorrect");
                     exit();
                 }
@@ -60,7 +59,7 @@
         // Preparer la requete pour update données
         $requete = $pdo->prepare("UPDATE users
                                 SET avatar = ?
-                                WHERE usersId = ? ");
+                                WHERE userId = ? ");
 
         $requete->execute(array($fichier,$_SESSION["user"]["id"]));
         $requete->closeCursor();

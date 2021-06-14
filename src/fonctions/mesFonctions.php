@@ -35,7 +35,6 @@
         if (in_array($extensionImage, $extensionArray)) {
             // Préparer le chemin répertoire + nom fichier
             $dossier.=basename($photo["name"]);
-            var_dump($dossier);
             // Envoyer mon fichier
             move_uploaded_file($photo["tmp_name"], $dossier);
         }
