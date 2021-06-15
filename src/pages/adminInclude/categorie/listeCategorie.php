@@ -2,8 +2,8 @@
 
 <div class="gestionCategorie">
     <?php 
-        require '../../src/pages/adminInclude/hardCategorie.php';
-        require '../../src/pages/adminInclude/articleCategorie.php';
-        require '../../src/pages/adminInclude/gameCategorie.php';
+        require '../../src/pages/adminInclude/categorie/hardCategorie.php';
+        require '../../src/pages/adminInclude/categorie/articleCategorie.php';
+        require '../../src/pages/adminInclude/categorie/gameCategorie.php';
     ?>
 </div>

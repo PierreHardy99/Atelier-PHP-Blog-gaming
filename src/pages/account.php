@@ -10,7 +10,7 @@
         // Update l'adresse du nouvel avatar de ma DB
         updateImg($photo);
         // Effacer l'avatar de l'utilisateur si celui-ci a déjà un avatar personnalisé
-        if ($_SESSION['user']['photo'] != "../../src/img/site/defaut_avatar.png" && !empty($_FILE['fichier'])) {
+        if ($_SESSION['user']['photo'] != "../../src/img/site/defaut_avatar.png") {
             unlink($_SESSION['user']['photo']);
         }
         
