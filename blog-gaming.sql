@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 22 juin 2021 à 19:20
+-- Généré le : mar. 22 juin 2021 à 20:10
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -265,14 +265,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `ban` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`userId`),
   KEY `FK_ROLE_DEFINI` (`roleId`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `users`
 --
 
 INSERT INTO `users` (`userId`, `avatar`, `login`, `nom`, `prenom`, `email`, `mdp`, `roleId`, `ban`) VALUES
-(6, '../../src/img/avatar/1624293669lebelgeduturfu.png', 'LeBelgeDuTurfu', 'Hardy', 'Pierre', 'pierre.hardy1999@gmail.com', '2655e96c3ed196614dbfb765b6f45ba9996572374f1', 1, '996572374f1');
+(6, '../../src/img/avatar/1624293669lebelgeduturfu.png', 'LeBelgeDuTurfu', 'Hardy', 'Pierre', 'pierre.hardy1999@gmail.com', '2655e96c3ed196614dbfb765b6f45ba9996572374f1', 1, '996572374f1'),
+(7, '../../src/img/site/defaut_avatar.png', 'alex', 'vens', 'alexandre', 'alex@alex.alex', '81dc9bdb52d04dc20036dbd8313ed055c20f48316cf6ca1c32', 1, 'c20f48316cf6ca1c32');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
