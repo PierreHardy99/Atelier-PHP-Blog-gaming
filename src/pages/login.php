@@ -4,7 +4,6 @@
     $mdpNoOk = false;
     require "../../src/fonctions/mesFonctions.php";
     require "../../src/fonctions/dbFonctions.php";  
-    require '../../src/fonctions/dbAccess.php';
 
     // Si mon user est connecté, je le renvoie sur l'accueil grâce à ma fonction:
     estConnecte();

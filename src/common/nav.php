@@ -42,7 +42,7 @@
                     }
                     if (isset($_SESSION['user']['role']) && $_SESSION['user']['role'] == 'auteur' || isset($_SESSION['user']['role']) && $_SESSION['user']['role'] == 'admin') {
                         ?>
-                        <li><a href="../../src/pages/rediger.php"><i class="fas fa-edit"></i> Rédiger</a></li>
+                        <li><a href="../../src/pages/articles.php"><i class="fas fa-edit"></i> Rédiger</a></li>
                         <?php
                     }
                     if (isset($_SESSION['user']['role']) && $_SESSION['user']['role'] == 'admin') {

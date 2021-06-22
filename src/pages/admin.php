@@ -3,6 +3,8 @@ $titre = "Espace d'administration";
 require "../../src/common/template.php";
 require '../../src/fonctions/dbFonctions.php';
 require '../../src/fonctions/mesFonctions.php';
+require '../../src/fonctions/categorieDBFonctions.php';
+require '../../src/fonctions/gameDBFonctions.php';
 
 // Refuser l'accès à la page aux personnes qui ne sont pas admin
 if (isset($_SESSION['user']['role']) != 'admin') {
@@ -18,6 +20,7 @@ $choixMenu = 'adminContenu';
     <div class="template p-2">
         <div class="menu mt-5">
             <a href="../../src/pages/admin.php?choix=listeCategorie">Gérer les catégories</a>
+            <a href="../../src/pages/admin.php?choix=listeJeu">Gérer les jeux</a>
             <a href="../../src/pages/admin.php?choix=listeUser">Gérer les users</a>
             <a href="../../src/pages/admin.php?choix=listeCommentaire">Gérer les commentaires</a>
             <a href="../../src/pages/admin.php?choix=listeArticle">Gérer les articles</a>
@@ -28,6 +31,9 @@ $choixMenu = 'adminContenu';
                 // Quand l'admin selectionne les catégories
                 if (isset($_GET['choix']) && $_GET['choix'] == 'listeCategorie') {
                     require '../../src/pages/adminInclude/categorie/listeCategorie.php';
+                }
+                if (isset($_GET['choix']) && $_GET['choix'] == 'listeJeu') {
+                    require '../../src/pages/adminInclude/listeJeu/listeJeu.php';
                 }
             ?>
         </div>

@@ -3,13 +3,13 @@
     if (isset($_SESSION['user']['role']) && $_SESSION['user']['role'] == "admin") {
         // Mon formulaire ajout gameCat a-t-il été envoyé
         if (isset($_POST['gameCat']) && !empty($_POST['gameCat'])) {
-            $gameCat = htmlspecialchars($_POST['type']);
+            $gameCat = htmlspecialchars($_POST['gameCat']);
             addGameCategorie($gameCat);
         }
 
         if (isset($_GET['deleteGameCat']) && $_GET['deleteGameCat'] == true) {
             $deleteGameCat = htmlspecialchars($_GET['value']);
-            $intdeleteGameCat = intval($deleteType);
+            $intdeleteGameCat = intval($deleteGameCat);
             deleteGameCategorie($intdeleteGameCat);
         }
     }
@@ -20,7 +20,7 @@
 <table class="mlr-a mt-3 p-1" id="gameCat">
     <thead>
         <tr>
-            <th colspan="2">Liste des types d'articles</th>
+            <th colspan="2">Liste des jeux</th>
         </tr>
     </thead>
     <tbody>

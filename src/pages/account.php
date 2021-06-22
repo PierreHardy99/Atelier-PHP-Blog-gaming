@@ -14,8 +14,17 @@
             unlink($_SESSION['user']['photo']);
         }
         
-        // Je réatribu le chemin du nouvel avatar dans mon $_SESSION user
-        $_SESSION['user']['photo'] = $photo;
+        // Vérif si l'utilisateur veut avoir l'avatar par défaut comme avatar (car c'est vraiment stylé !)
+
+        // Si il n'y a pas eu d'erreur dans l'envoie du fichier, -> error 4, fichier vide
+        if ($_FILES["fichier"]["error"] == 0) {
+            // Je réatribu le chemin du nouvel avatar dans mon $_SESSION user
+            $_SESSION['user']['photo'] = $photo;
+        } else {
+            // Sinon je mets l'avatar par défault
+            $_SESSION['user']['photo'] = "../../src/img/site/defaut_avatar.png";
+        }
+
         header("location: ../../src/pages/account.php?maj=true&message=Félicitation votre avatar est mis à jour !");
         exit();
     }
