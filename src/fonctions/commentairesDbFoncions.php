@@ -5,9 +5,13 @@ function envoyerCommentaires($articleId,$auteurId,$pseudo,$dateCommentaire,$comm
     $requete = $pdo->prepare("INSERT INTO commentaires(articleId,auteurId,pseudo,dateCommentaire,contenu)
                               VALUES (?,?,?,?,?)");
     $requete->execute(array($articleId,$auteurId,$pseudo,$dateCommentaire, $commentaire)) or die(print_r($requete->errorInfo(), TRUE));
+    if ($requete == false) {
+        echo 'erreur dans la recherche';
+        var_dump($requete);
+        var_dump($articleId);
+        exit();
+    }
     $requete->closeCursor();
-    header('location: ../../src/common/pageArticle.php?id=$articleId');
-    exit();
 }
 
 function getAvatar($userId){

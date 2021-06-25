@@ -20,7 +20,7 @@
 ?>
     <section>
         <table>
-            <form action="" method="post">
+            <form action="../../../src/common/pageArticle.php?id=<?=$articleId?>#commentaire" method="post">
                 <thead>
                     <tr>
                         <td>Commentez cet article</td>
@@ -71,7 +71,7 @@
                     $avatar = '../../src/img/site/defaut_avatar.png';
                 }
                 ?>
-                    <div>
+                    <div id="commentaire">
                         <div>
                             <img src="<?=$avatar?>" alt="<?=$value['pseudo']?> - AVATAR" width="150px" height="150px">
                             <p><?=$value['pseudo']?></p>

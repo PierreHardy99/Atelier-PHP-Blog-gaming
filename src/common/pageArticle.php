@@ -13,6 +13,7 @@
     require "../../src/fonctions/dbAccess.php";
     require '../../src/fonctions/afficherArticleDbFonctions.php';
     require '../../src/fonctions/commentairesDbFoncions.php';
+    
 
     // Je récupère l'id qui est fourni par l'url via mon get
     if (isset($_GET['id']) && !empty($_GET['id'])) {
@@ -70,47 +71,9 @@
     </div>
 
     <div class="listArticle">
-        <h2>Nos derniers Articles...</h2>
-        <div>
-            <img src="../../src/img/article/1624379289returnalNews1.png"  style="width: 100%" alt="">
-            <h2 style="color: white"><a href="#">titre de l'article</a></h2>
-        </div>
-        <div>
-            <img src="../../src/img/article/1624379289returnalNews1.png"  style="width: 100%" alt="">
-            <h2 style="color: white"><a href="#">titre de l'article</a></h2>
-        </div>
-        <div>
-            <img src="../../src/img/article/1624379289returnalNews1.png"  style="width: 100%" alt="">
-            <h2 style="color: white"><a href="#">titre de l'article</a></h2>
-        </div>
-        <div>
-            <img src="../../src/img/article/1624379289returnalNews1.png"  style="width: 100%" alt="">
-            <h2 style="color: white"><a href="#">titre de l'article</a></h2>
-        </div>
-        <div>
-            <img src="../../src/img/article/1624379289returnalNews1.png"  style="width: 100%" alt="">
-            <h2 style="color: white"><a href="#">titre de l'article</a></h2>
-        </div>
-        <div>
-            <img src="../../src/img/article/1624379289returnalNews1.png"  style="width: 100%" alt="">
-            <h2 style="color: white"><a href="#">titre de l'article</a></h2>
-        </div>
-        <div>
-            <img src="../../src/img/article/1624379289returnalNews1.png"  style="width: 100%" alt="">
-            <h2 style="color: white"><a href="#">titre de l'article</a></h2>
-        </div>
-        <div>
-            <img src="../../src/img/article/1624379289returnalNews1.png"  style="width: 100%" alt="">
-            <h2 style="color: white"><a href="#">titre de l'article</a></h2>
-        </div>
-        <div>
-            <img src="../../src/img/article/1624379289returnalNews1.png"  style="width: 100%" alt="">
-            <h2 style="color: white"><a href="#">titre de l'article</a></h2>
-        </div>
-        <div>
-            <img src="../../src/img/article/1624379289returnalNews1.png"  style="width: 100%" alt="">
-            <h2 style="color: white"><a href="#">titre de l'article</a></h2>
-        </div>
+        <?php 
+            require '../../src/pages/articlesIncludes/listeDerniersArticles.php';
+        ?>
     </div>
 </section>
 
