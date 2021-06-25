@@ -84,6 +84,17 @@
     margin-bottom: 0.5rem;
 }
 
+.commentaires table tbody tr div{
+    display: flex;
+
+}
+.commentaires table tbody tr div img{
+    display: 1;
+}
+.commentaires table tbody tr div p{
+    display: 9;
+}
+
 input[type=submit]{
     background: #FF0036;
     box-shadow: 0px 10px 13px -7px #000000, 1px 2px 3px 3px rgba(0,0,0,0);

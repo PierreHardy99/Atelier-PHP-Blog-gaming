@@ -12,6 +12,7 @@
     require "../../src/common/template.php";
     require "../../src/fonctions/dbAccess.php";
     require '../../src/fonctions/afficherArticleDbFonctions.php';
+    require '../../src/fonctions/commentairesDbFoncions.php';
 
     // Je récupère l'id qui est fourni par l'url via mon get
     if (isset($_GET['id']) && !empty($_GET['id'])) {
@@ -60,8 +61,12 @@
         <div class="contenuArticle">
             <?= $contenuArticle[0]['content'] ?>
         </div>
-
         <!-- J'injecterai les commentaires de mes users -->
+        <div class="commentaires">
+                <?php 
+                    require '../../src/pages/articlesIncludes/commentaires.php';
+                ?>
+        </div>
     </div>
 
     <div class="listArticle">
@@ -108,3 +113,7 @@
         </div>
     </div>
 </section>
+
+<?php 
+    require './footer.php';
+?>
