@@ -48,4 +48,32 @@
         $requete->execute(array($intArticleId)) or die(print_r($requete->errorInfo(), TRUE));
         $requete->closeCursor();
     }
+
+    function getTop(){
+        $pdo = connectDB();
+        $requete = $pdo->query('SELECT a.articleId, a.titre, a.imgUrl, a.content, a.date, c.nomCategorie, gc.genre, u.nom, u.prenom
+                                  FROM articles a
+                                  INNER JOIN categorie c ON c.categorieId = a.categorieId
+                                  INNER JOIN gameCategory gc ON gc.gameCategoryId = a.gameCategorieId
+                                  INNER JOIN users u ON u.userId = a.auteurId
+                                  INNER JOIN jeux j ON j.gameId = a.gameId
+                                  INNER JOIN hardware h ON h.hardId = a.hardId
+                                  INNER JOIN stars s ON s.articleId = a.articleId
+                                  WHERE s.articleId = a.articleId
+                                  ORDER BY starId DESC');
+        while($données = $requete->fetch()){
+            $listOnTop[] = $données;
+        }
+        return $listOnTop;
+    }
+
+    function getArticle(){
+        $pdo = connectDB();
+        $requete = $pdo->query("SELECT * FROM articles") or die(print_r($requete->errorInfo(), TRUE));;
+        while($données = $requete->fetch()){
+            $listeArticle[] = $données;
+        }
+        $requete->closeCursor();
+        return $listeArticle;
+    }
 ?>

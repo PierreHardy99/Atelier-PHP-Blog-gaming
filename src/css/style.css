@@ -50,7 +50,7 @@ header nav ul li a:hover{
     margin-top: 3rem;
 }
 
-#news .newsTitre{
+.newsTitre{
     color: #F5F2F2;
     font-size: 1.5rem;
     -webkit-text-stroke: 1px #FF0036;
@@ -102,16 +102,24 @@ header nav ul li a:hover{
 }
 
 /* MORE NEWS */
-.moreNews{
+#moreNewsArticle{
+    padding: 5rem;
     display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    margin: auto;
 }
 
-.moreNews-row-item {
-    flex: 1 1 30%; /*grow | shrink | basis */
-    padding: 1rem;
+.MoreNewsArticleCard{
+    display: flex;
+    border-bottom: 1px solid black;
+    flex: 5
+}
+
+#MoreNewsArticle h2{
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.contenuMoreNews{
+    font-size: 1rem;
 }
 
 /* FOOTER */

@@ -72,6 +72,14 @@
     width: 100%;
 }
 
+.commentaires .inline{
+    display: inline-block;
+}
+
+.commentaires .grid{
+    display: grid;
+}
+
 .commentaires table tbody tr td{
     width: 100%;
 }
@@ -161,26 +169,36 @@ p iframe{
     width: 80%;
     margin: 2rem auto;
     flex-direction: column;
+    border: 1px solid black;
 }
 
-.contenuCommentaire {
+.contenuCommentaire > p {
     background-color: gray;
     padding: 1em;
+}
+
+.contenuCommentaire > p:first-child {
+    flex: 1;
+}
+
+.contenuCommentaire{
+    display: flex;
 }
 
 .enteteCommentaire {
     display: flex;
     flex-direction: row;
-    margin: 0.4em;
 }
 
 .afficherCommentaire>div {
-    margin: 0.4em;
     background-color: yellow;
     box-shadow: 0px 10px 13px -7px #000000, 1px 2px 3px 3px rgba(0, 0, 0, 0);
 }
 
 .enteteCommentaire>img {
-    max-width: 100px;
+    margin: 0.5rem;
+}
+
+.commentaireImg{
     border: 3px solid black;
 }

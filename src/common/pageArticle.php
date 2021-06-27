@@ -63,7 +63,7 @@
             <?= $contenuArticle[0]['content'] ?>
         </div>
         <!-- J'injecterai les commentaires de mes users -->
-        <div class="commentaires">
+        <div class="commentaires pt-2">
                 <?php 
                     require '../../src/pages/articlesIncludes/commentaires.php';
                 ?>
@@ -78,5 +78,5 @@
 </section>
 
 <?php 
-    require './footer.php';
+    require '../../src/common/footer.php';
 ?>

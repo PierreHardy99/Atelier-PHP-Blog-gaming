@@ -42,6 +42,7 @@
     $listeJeu = getGame();
     $listeGameCat = getGameCategory();
     $listeHard = getHardware();
+    var_dump($listeHard);
 
 ?>
 <h2 class="ta-c mt-5">Liste des jeux existants</h2>
@@ -74,7 +75,7 @@ if (isset($_SESSION['user']['role']) && $_SESSION['user']['role'] == 'admin') {
                                 <?php 
                                     foreach ($listeHard as $value) {
                                     ?>
-                                      <option value="<?= $value['hardId']?>"><?=$value['console']?></option>  
+                                      <option value="<?= $value['0']?>"><?=$value['1']?></option>  
                                     <?php
                                     }
                                 ?>
@@ -86,7 +87,7 @@ if (isset($_SESSION['user']['role']) && $_SESSION['user']['role'] == 'admin') {
                                 <?php 
                                     foreach ($listeGameCat as $value) {
                                     ?>
-                                      <option value="<?= $value['gameCategoryId']?>"><?=$value['genre']?></option>  
+                                      <option value="<?= $value['0']?>"><?=$value['1']?></option>  
                                     <?php
                                     }
                                 ?>

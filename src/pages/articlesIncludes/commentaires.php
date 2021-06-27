@@ -1,7 +1,9 @@
 <?php 
+
     if (isset($_GET['id'])) {
         $articleId = $_GET['id'];
     }
+
 
     if (isset($_POST['commentaire']) && !empty($_POST['commentaire'])) {
         if (isset($_SESSION["user"]) && $_SESSION["connecté"] == true) {
@@ -18,7 +20,7 @@
     }
     $listeCommentaire = getCommentaire($articleId);
 ?>
-    <section>
+    <section class="pl-9 pr-9">
         <table>
             <form action="../../../src/common/pageArticle.php?id=<?=$articleId?>#commentaire" method="post">
                 <thead>
@@ -31,21 +33,19 @@
                     <?php 
                         if (isset($_SESSION["user"]) && $_SESSION["connecté"] == true) {
                     ?>
-                        <tr>
-                            <td><img src="<?=$_SESSION['user']['photo']?>" alt="<?=$_SESSION['user']['login']?> - AVATAR" width="150px" height="150px"></td>
-
-                        </tr>
-                        <tr>
-                            <td><?=$_SESSION['user']['login']?></td>
-                        </tr>
+                        
+                            <tr class="inline">
+                                <td><img src="<?=$_SESSION['user']['photo']?>" class="commentaireImg" alt="<?=$_SESSION['user']['login']?> - AVATAR" width="75px" height="75px"></td>
+                                <td class="pl-1"><?=$_SESSION['user']['login']?></td>
+                            </tr>
+                        
+                        
                     <?php
                         } else {
                     ?>
-                            <tr>
+                            <tr class="grid">
                                 <td><img src="../../../src/img/site/defaut_avatar.png" alt="defaut_avatar - AVATAR" width="150px" height="150px"></td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" name="pseudo" required></td>
+                                <td><input type="text" name="pseudo" placeholder="Entrez votre pseudo..." required></td>
                             </tr>
                     <?php    
                         }
@@ -71,14 +71,14 @@
                     $avatar = '../../src/img/site/defaut_avatar.png';
                 }
                 ?>
-                    <div id="commentaire">
-                        <div>
-                            <img src="<?=$avatar?>" alt="<?=$value['pseudo']?> - AVATAR" width="150px" height="150px">
-                            <p><?=$value['pseudo']?></p>
-                            <p><?=$value['dateCommentaire']?></p>
+                    <div id="commentaire" class="afficherCommentaire">
+                        <div class="enteteCommentaire">
+                            <img src="<?=$avatar?>" class="commentaireImg" alt="<?=$value['pseudo']?> - AVATAR" width="75px" height="75px">
+                            <p class="pt-1 pl-1"><?=$value['pseudo']?> <br> <?=$value['dateCommentaire']?> </p>
                         </div>
-                        <div>
+                        <div class="contenuCommentaire">
                             <p><?=$value['contenu']?></p>
+                            <p><?php if ( isset($_SESSION['user']['role']) == 'admin' || (isset($_SESSION['user']['id']) == $value['auteurId'] && $value['auteurId'] != NULL)){echo '<i class="far fa-edit"></i>';}?></p>
                         </div>
                     </div>
 
