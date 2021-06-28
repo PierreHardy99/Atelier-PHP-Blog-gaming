@@ -1,9 +1,10 @@
 <?php
     $titre = "Votre compte";
     require "../../src/common/template.php";
-    $mdpNok = false;
     require "../../src/fonctions/dbFonctions.php";
     require '../../src/fonctions/mesFonctions.php';
+    require '../../src/fonctions/articlesDbFonctions.php';
+    require '../../src/fonctions/commentairesDBFonctions.php';
     
     // traiter le formulaire d'envoi de photo
     if(isset($_FILES["fichier"])):
@@ -19,6 +20,9 @@
         header("location ../../src/pages/account.php?maj=true&message=Félicitation, votre avatar est mis à jour!");
         header("location ../../src/pages/account.php?maj=true&message=Félicitation, votre avatar est mis à jour!");
     endif;
+
+    $listeArticle = getArticleForAccount($_SESSION['user']['id']);
+    $listeCommentaire = getCommentaireForAccount($_SESSION['user']['id']);
 ?>
 
 <section id="account">
@@ -64,11 +68,33 @@
             <?php
                 if($_SESSION["user"]["role"] == "auteur" || $_SESSION["user"]["role"] == "admin"): ?>
             <h2>Vos Articles</h2>
-            <p>pas d'articles</p>
+            <?php 
+                if (isset($listeArticle)) {
+                    foreach ($listeArticle as $value) {
+                        $titreRaccourcis = substr($value['titre'],0,75).'...';
+                    ?>
+                        <p><?=$titreRaccourcis?> <a href="../../src/common/pageArticle.php?id=<?=$value['articleId']?>"><i class="fas fa-plus"></i></a></p>
+                    <?php
+                    }
+                } else {
+                    echo '<p>pas d\'articles</p>';
+                }
+            ?>
             <!-- LISTE DES ARTICLES -->
             <?php endif; ?>
             <h2>Vos Commentaires</h2>
-            <p>pas de commentaires</p>
+            <?php 
+                if (isset($listeCommentaire)) {
+                    foreach ($listeCommentaire as $value) {
+                        $contenuRaccourcis = substr($value['contenu'],0,75).'...';
+                    ?>
+                        <p><?=$contenuRaccourcis?> <a href="../../src/common/pageArticle.php?id=<?=$value['articleId']?>"><i class="fas fa-plus"></i></a></p>
+                    <?php
+                    }
+                } else {
+                    echo '<p>pas de commentaires</p>';
+                }
+            ?>
             <!-- LISTE DES COMMENTAIRES -->
         </div>
     </div>

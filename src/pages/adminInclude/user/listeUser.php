@@ -1,5 +1,18 @@
 <?php 
 
+    if (isset($_SESSION['user']['role']) && $_SESSION['user']['role'] == 'admin') {
+        if (isset($_GET['deleteUser']) && isset($_GET['deleteUser']) == true) {
+            $delGameId = htmlspecialchars($_GET['value']);
+
+            if (isset($_GET['avatar'])) {
+                unlink($_GET['avatar']);
+            }
+
+            deleteUser($delGameId);
+            header('location: ../../src/pages/admin.php?choix=listeUser');
+            exit();
+        }
+    }
     $listeUser = getUser();
 
 ?>

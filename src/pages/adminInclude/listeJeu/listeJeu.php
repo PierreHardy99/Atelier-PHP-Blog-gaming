@@ -29,9 +29,9 @@
             $deleteGame = htmlspecialchars($_GET['value']);
             $intDeleteGame = intval($deleteGame);
             // Supprime la cover du ficher
-            // if (isset($_GET['cover'])) {
-            //     unlink($_GET['cover']);
-            // }
+            if (isset($_GET['cover'])) {
+                unlink($_GET['cover']);
+            }
             deleteGame($intDeleteGame);
             header("location: ../../src/pages/admin.php?choix=listeJeu");
             exit();
@@ -42,7 +42,6 @@
     $listeJeu = getGame();
     $listeGameCat = getGameCategory();
     $listeHard = getHardware();
-    var_dump($listeHard);
 
 ?>
 <h2 class="ta-c mt-5">Liste des jeux existants</h2>

@@ -1,4 +1,13 @@
 <?php 
+    if (isset($_SESSION['user']['role']) && $_SESSION['user']['role'] == 'admin') {
+        if (isset($_GET['deleteCommentaire']) && $_GET['deleteCommentaire'] == true) {
+            $delComId = $_GET['value'];
+            deleteCommentaire($delComId);
+            header('location: ../../src/pages/admin.php?choix=listeCommentaire');
+            exit();
+        }
+    }
+
 
     $listeCommentaire = getCommentaire();
 

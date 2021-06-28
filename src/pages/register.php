@@ -2,7 +2,6 @@
     $titre = "Enregistez-vous";
     require "../../src/common/template.php";
     require "../../src/fonctions/mesFonctions.php";
-    require "../../src/fonctions/dbFonctions.php";
 
     // si mon user est connecté, je le renvoie sur la page d'accueil grace à ma fonction
     estConnecte();

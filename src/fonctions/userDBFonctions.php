@@ -37,4 +37,11 @@
         
     }
 
+    function deleteUser($id){
+        $pdo = connectDB();
+        $requete = $pdo->prepare('DELETE FROM users where userId = ?');
+        $requete->execute(array($id));
+        $requete->closeCursor();
+    }
+
 ?>

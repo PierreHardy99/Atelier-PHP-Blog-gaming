@@ -13,12 +13,13 @@
     </div>
     <nav>
         <ul>
+            
             <li><a href="../../src/pages/index.php">PS5</a></li>
-            <li><a href="">PS4</a></li>
-            <li><a href="">XBOX ONE</a></li>
-            <li><a href="">SWITCH</a></li>
-            <li><a href="">PC</a></li>
-            <li><a href="">VR</a></li>
+            <li><a href="../../src/pages/index.php">PS4</a></li>
+            <li><a href="../../src/pages/index.php">XBOX ONE</a></li>
+            <li><a href="../../src/pages/index.php">SWITCH</a></li>
+            <li><a href="../../src/pages/index.php">PC</a></li>
+            <li><a href="../../src/pages/index.php">VR</a></li>
         </ul>
     </nav>
     <div>

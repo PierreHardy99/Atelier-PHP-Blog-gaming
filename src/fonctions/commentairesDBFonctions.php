@@ -74,4 +74,12 @@ function getCommentaireForAccount($id){
     }
 }
 
+function deleteCommentaire($id){
+    $pdo = connectDB();
+    $requete = $pdo->prepare('DELETE FROM commentaires where commentaireId = ?');
+    $requete->execute(array($id));
+    $requete->closeCursor();
+}
+
+
 ?>

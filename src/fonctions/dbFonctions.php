@@ -9,6 +9,16 @@
         $requete->closeCursor(); // Ferme la connexion à la base de donnée
     }
 
+    function getConsoleNav(){
+        $pdo = connectDB();
+        $requete = $pdo->query('SELECT * from hardware') or die(print_r($requete->errorInfo(), TRUE));
+        while ($données = $requete->fetch()) {
+            $listeConsole[] = $données; 
+        }
+        $requete->closeCursor();
+        return $listeConsole;
+    }
+
     // Fonction pour se connecter au site
     function login($user, $password){
         // connection à la db
@@ -21,37 +31,44 @@
         // Traitement de la requete
         while($result = $requete->fetch()){
             if($result["login"] == $user){
-                if ($result['actif'] == 1 ) {
-                    // sel du mdp envoyé avec le sel contenu dans la colonne ban
-                    $sel = md5($password) . $result["ban"];
-
-                    //J'active ma session user avec les infos dont je pourrai avoir besoin
-                    // tant que mon utilisateur est connecté 
-                    if($result["mdp"] == $sel){
-                        $_SESSION["connect"] = true;
-                        $_SESSION["user"] = [
-                            "id" => $result["userId"],
-                            "nom" => $result["nom"],
-                            "prenom" => $result["prenom"],
-                            "photo" => $result["avatar"],
-                            "login" => $result["login"],
-                            "email" => $result["email"],
-                            "role" => $result["nomRole"]
-                        ];
-                        // J'active la session connecté
-                        $_SESSION["connecté"] = true;
-                        // Je redirige vers la page account
-                        header("location: ../../src/pages/account.php");
-                        exit();
-                    }
-                    else{
-                        header("location: ../../src/pages/login.php?erreur=Mot de passe incorrect");
+                // On vérifie que l'user n'est pas ban
+                if (isset($result["ban"]) && !empty($result["ban"])) {
+                    if ($result['actif'] == 1 ) {
+                        // sel du mdp envoyé avec le sel contenu dans la colonne ban
+                        $sel = md5($password) . $result["ban"];
+    
+                        //J'active ma session user avec les infos dont je pourrai avoir besoin
+                        // tant que mon utilisateur est connecté 
+                        if($result["mdp"] == $sel){
+                            $_SESSION["connect"] = true;
+                            $_SESSION["user"] = [
+                                "id" => $result["userId"],
+                                "nom" => $result["nom"],
+                                "prenom" => $result["prenom"],
+                                "photo" => $result["avatar"],
+                                "login" => $result["login"],
+                                "email" => $result["email"],
+                                "role" => $result["nomRole"]
+                            ];
+                            // J'active la session connecté
+                            $_SESSION["connecté"] = true;
+                            // Je redirige vers la page account
+                            header("location: ../../src/pages/account.php");
+                            exit();
+                        }
+                        else{
+                            header("location: ../../src/pages/login.php?erreur=Mot de passe incorrect");
+                            exit();
+                        }
+                    } else {
+                        header("location: ../../src/pages/login.php?erreur=Votre compte n'est pas activé, veuillez l'activez !");
                         exit();
                     }
                 } else {
-                    header("location: ../../src/pages/login.php?erreur=Votre compte n'est pas activé, veuillez l'activez !");
+                    header("location: ../../src/pages/login.php?erreur=Votre compte a été suspendu !");
                     exit();
                 }
+                
             }
         }
         // Si mon script arrive ici, il est sorti de ma boucle sans trouver de user
