@@ -12,7 +12,6 @@
     if (isset($_POST["login"]) && isset($_POST["mdp"])) {
         $login = htmlspecialchars($_POST["login"]);
         $mdp = htmlspecialchars($_POST["mdp"]);
-
         // Mes données sont sécurisée, je peux appeler ma fonction pour connecter mon user
         login($login,$mdp);
     } else {
@@ -24,6 +23,8 @@
             ?>
                 <h2><?=$_GET["erreur"];?></h2>
             <?php
+        } else if (isset($_GET['success'])) {
+            echo '<h2>'.$_GET["success"].'</h2>';
         }
     
     ?>

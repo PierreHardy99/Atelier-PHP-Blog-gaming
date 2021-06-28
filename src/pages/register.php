@@ -43,6 +43,8 @@
         $mdp = $result["mdp"];
         $mdp2 = $result["mdp2"];
         $role = 4;
+        $clef = md5(microtime().rand());
+        $actif = 0;
 
         // verifier si mot de passe sont identiques 
         if ($mdp == $mdp2) {
@@ -97,11 +99,35 @@
         }
 
         // Mes données sont correctes, elles sont saines, je peux créer mon user
-        createUser($photo, $login, $nom, $prenom, $email, $mdpToSend, $role, $sel);
+        $dest = $email;
+        $sujet = 'Activation du compte';
+        $corp = '
+                    <!DOCTYPE html>
+                    <html lang="fr">
+                    <body>
+                        <h2>Bonjour '.$login.' </h2><br>
+                        <p>Votre compte a bien été crée, il ne vous reste plus qu\'à valider votre compte en cliquant sur Activer votre compte</p><br>
+                        <a href="localhost/src/pages/verification.php?user='.$login.'&clef='.$clef.'">Activez votre compte</a><br>
+                        <p>Á bientot sur BELGIUM VIDEO-GAMING</p>
+                    </body>
+                    </html>
+
+        ';
+        $headers = 'Content-type: text/html; charset=utf8';
+
+        
+        if (mail($dest,$sujet,$corp,$headers)) {
+            createUser($photo, $login, $nom, $prenom, $email, $mdpToSend, $role, $sel,$clef,$actif);
+            echo '<h2 class="registerOk">Votre compte est maintenant créé, veuillez activez votre compte par le lien qui a été envoié et puis vous<a href="../../src/pages/login.php">CONNECTER</a></h2>';
+        } else {
+            echo '<h2 class="registerOk">Une erreur est survenu lors de la création de votre compte, veuillez contactez un administrateur</h2>';
+        }
+        
+
 
         // Tout s'est bien passé, invite user à se connecter
 ?>
-    <h2 class="registerOk">Votre compte est maintenant créé, vous pouvez vous <a href="../../src/pages/login.php">CONNECTER</a></h2>
+    
 <?php
 
     } else {

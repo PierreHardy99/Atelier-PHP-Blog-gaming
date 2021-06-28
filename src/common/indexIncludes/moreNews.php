@@ -11,8 +11,8 @@
             $titreRaccourci = substr($value['titre'], 0, 70) . '...';
             $contenuRaccourci = substr($value['content'], 0, 250) . '...';
         ?>
-            <div class="MoreNewsArticleCard mb-2">
-                <div>
+            <div class="MoreNewsArticleCard mb-2 pb-2">
+                <div class="pt-2">
                     <img src="<?=$value['imgUrl']?>" alt="<?=$titreRaccourci?>" width="300px" height="150px">
                 </div>
                 <div class="contenuMoreNews pl-2 pt-1">
@@ -24,7 +24,7 @@
         <?php
         }?>
     </div>
-    <div class="listArticle">
+    <div class="listArticle ml-1">
         <?php 
             require './src/common/indexIncludes/articleOnTop.php';
         ?>

@@ -1,90 +1,78 @@
 <?php
     $titre = "Votre compte";
     require "../../src/common/template.php";
-    require '../../src/fonctions/dbFonctions.php';
+    $mdpNok = false;
+    require "../../src/fonctions/dbFonctions.php";
     require '../../src/fonctions/mesFonctions.php';
-    // Traitement du formulaire
-    if (isset($_FILES['fichier'])) {
-        // Appelle ma fonction sendImg
-        $photo = sendImg($_FILES['fichier'],"avatar");
-        // Update l'adresse du nouvel avatar de ma DB
+    
+    // traiter le formulaire d'envoi de photo
+    if(isset($_FILES["fichier"])):
+        // j'appelle ma fonction envoyer image dans une variable
+        $photo = sendImg($_FILES["fichier"], "avatar");
+        // Je lance ma fonction pour mettre à jour la base de donnée
         updateImg($photo);
-        // Effacer l'avatar de l'utilisateur si celui-ci a déjà un avatar personnalisé
-        if ($_SESSION['user']['photo'] != "../../src/img/site/defaut_avatar.png") {
-            unlink($_SESSION['user']['photo']);
-        }
-        
-        // Vérif si l'utilisateur veut avoir l'avatar par défaut comme avatar (car c'est vraiment stylé !)
-
-        // Si il n'y a pas eu d'erreur dans l'envoie du fichier, -> error 4, fichier vide
-        if ($_FILES["fichier"]["error"] == 0) {
-            // Je réatribu le chemin du nouvel avatar dans mon $_SESSION user
-            $_SESSION['user']['photo'] = $photo;
-        } else {
-            // Sinon je mets l'avatar par défault
-            $_SESSION['user']['photo'] = "../../src/img/site/defaut_avatar.png";
-        }
-
-        header("location: ../../src/pages/account.php?maj=true&message=Félicitation votre avatar est mis à jour !");
-        exit();
-    }
+        // image envoyée et mise à jour de la bd ok, je peux effacer l'ancien avatar
+        unlink($_SESSION["user"]["photo"]);
+        // Je mets à jour ma variable session photo
+        $_SESSION["user"]["photo"] = $photo;
+        // je recharge la page
+        header("location ../../src/pages/account.php?maj=true&message=Félicitation, votre avatar est mis à jour!");
+        header("location ../../src/pages/account.php?maj=true&message=Félicitation, votre avatar est mis à jour!");
+    endif;
 ?>
 
 <section id="account">
     <div class="account">
+
         <div class="infosMembre p-2">
-            <a href="../../src/pages/account.php?edit=true"><img title="Cliquez pour changer votre avatar" src="<?=$_SESSION['user']['photo']?>" alt="Avatar du membre"></a>
-            <!-- Si mon user à cliqué sur la photo je fais apparaitre un formulaire -->
+            <a href="../../src/pages/account.php?edit=true"><img title="Cliquez pour changer votre avatar" src="<?= $_SESSION["user"]["photo"] ?>" alt=""></a>
+            <!-- Si mon user a cliqué sur la photo, faire apparaître le formulaire d'envoi de fichier -->
             <?php 
-                if (isset($_GET['edit']) && $_GET['edit'] == true) {
+                if(isset($_GET["edit"]) && $_GET["edit"] == true):
             ?>
-            <form action="../../src/pages/account.php" method="post" enctype="multipart/form-data">
-                <input type="file" name="fichier">
-                <input type="submit" value="Envoyer votre avatar">
+            <form method="post" action="../../src/pages/account.php" enctype="multipart/form-data">
+                    <input type="file" name="fichier" required>
+                    <input type="submit" value="Envoyez votre photo">
             </form>
-            <?php
-                // Si la maj image est réussis, afficher le message
-                if (isset($_GET['maj']) && $_GET['maj'] == true) {
-                    echo '<h3>'.$_GET['message'].'</h3>';
-                }
-                }
-                // Message pour féliciter l'upload du formulaire
+            <?php endif; 
+                // Si la mise à jour s'est bien passée, afficher l'information
+                if(isset($_GET["maj"]) && isset($_GET["maj"]) == true):
+                    echo "<h3>" . $_GET["message"] . "</h3>";
+                endif;
             ?>
             <table>
                 <tr>
-                    <td>Pseudo:</td>
-                    <td><?=$_SESSION['user']['login']?></td>
+                    <td>pseudo:</td>
+                    <td><?= $_SESSION["user"]["login"] ?></td>
                 </tr>
                 <tr>
                     <td>Nom:</td>
-                    <td><?=$_SESSION['user']['nom']?></td>
+                    <td><?= $_SESSION["user"]["nom"] ?></td>
                 </tr>
                 <tr>
-                    <td>Prénom:</td>
-                    <td><?=$_SESSION['user']['prenom']?></td>
+                    <td>Prenom:</td>
+                    <td><?= $_SESSION["user"]["prenom"] ?></td>
                 </tr>
                 <tr>
                     <td>Statut:</td>
-                    <td><?=$_SESSION['user']['role']?></td>
+                    <td><?= $_SESSION["user"]["role"] ?></td>
                 </tr>
             </table>
         </div>
         <div class="contenuMembre p-2">
-        <?php 
-        // Si le user est au moins auteur, j'affiche une liste de ses articles
-            if ($_SESSION['user']['role'] == 'auteur' || $_SESSION['user']['role'] == 'admin') {
-        ?>
-            <h2>Vos articles</h2>
-            <p>Pas d'articles</p>
-        <?php
-            }
-        ?>
-            <h2>Vos commentaires</h2>
+            <!-- Si le role est au moins auteur -->
+            <?php
+                if($_SESSION["user"]["role"] == "auteur" || $_SESSION["user"]["role"] == "admin"): ?>
+            <h2>Vos Articles</h2>
+            <p>pas d'articles</p>
+            <!-- LISTE DES ARTICLES -->
+            <?php endif; ?>
+            <h2>Vos Commentaires</h2>
             <p>pas de commentaires</p>
+            <!-- LISTE DES COMMENTAIRES -->
         </div>
     </div>
 </section>
-
-<?php 
-require '../../src/common/footer.php';
+<?php
+    require "../../src/common/footer.php";
 ?>

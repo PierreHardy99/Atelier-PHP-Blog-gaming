@@ -64,16 +64,33 @@
         while($données = $requete->fetch()){
             $listOnTop[] = $données;
         }
-        return $listOnTop;
+        if (isset($listOnTop)) {
+            return $listOnTop;
+        }
+        
     }
 
     function getArticle(){
         $pdo = connectDB();
-        $requete = $pdo->query("SELECT * FROM articles") or die(print_r($requete->errorInfo(), TRUE));;
+        $requete = $pdo->query("SELECT * FROM articles") or die(print_r($requete->errorInfo(), TRUE));
         while($données = $requete->fetch()){
             $listeArticle[] = $données;
         }
         $requete->closeCursor();
         return $listeArticle;
+    }
+
+    function getArticleForAccount($id){
+        $pdo = connectDB();
+        $requete = $pdo->prepare('SELECT * from articles WHERE auteurId = ?');
+        $requete->execute(array($id)) or die(print_r($requete->errorInfo(), TRUE));
+        while ($données = $requete->fetch()) {
+            $listeCommentaire[] = $données;
+        }
+        $requete->closeCursor();
+        if (isset($listeCommentaire)) {
+            return $listeCommentaire;
+        }
+        
     }
 ?>

@@ -12,7 +12,7 @@
     require "../../src/common/template.php";
     require "../../src/fonctions/dbAccess.php";
     require '../../src/fonctions/afficherArticleDbFonctions.php';
-    require '../../src/fonctions/commentairesDbFoncions.php';
+    require '../../src/fonctions/commentairesDBFonctions.php';
     
 
     // Je récupère l'id qui est fourni par l'url via mon get

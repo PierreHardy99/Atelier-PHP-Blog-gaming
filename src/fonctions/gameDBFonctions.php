@@ -49,7 +49,7 @@
     function getGameByName($gameId){
         $pdo = connectDB();
         $requete = $pdo->prepare('SELECT gameId FROM jeux WHERE nom = ?');
-        $requete->execute(array($gameId));
+        $requete->execute(array($gameId)) or die(print_r($requete->errorInfo(), TRUE));
         while ($données = $requete->fetch()) {
             $idJeux[] = $données;
         }
@@ -61,7 +61,7 @@
     function getHardByName($valeur){
         $pdo = connectDB();
         $requete = $pdo->prepare('SELECT hardId FROM hardware WHERE console = ?');
-        $requete->execute(array($valeur));
+        $requete->execute(array($valeur)) or die(print_r($requete->errorInfo(), TRUE));
         while ($données = $requete->fetch()) {
             $idHardware[] = $données;
         }

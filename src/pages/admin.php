@@ -5,6 +5,8 @@ require '../../src/fonctions/dbFonctions.php';
 require '../../src/fonctions/mesFonctions.php';
 require '../../src/fonctions/categorieDBFonctions.php';
 require '../../src/fonctions/gameDBFonctions.php';
+require '../../src/fonctions/userDBFonctions.php';
+require '../../src/fonctions/commentairesDBFonctions.php';
 
 // Refuser l'accès à la page aux personnes qui ne sont pas admin
 if (isset($_SESSION['user']['role']) != 'admin') {
@@ -34,6 +36,12 @@ $choixMenu = 'adminContenu';
                 }
                 if (isset($_GET['choix']) && $_GET['choix'] == 'listeJeu') {
                     require '../../src/pages/adminInclude/listeJeu/listeJeu.php';
+                }
+                if (isset($_GET['choix']) && $_GET['choix'] == 'listeUser') {
+                    require '../../src/pages/adminInclude/user/listeUser.php';
+                }
+                if (isset($_GET['choix']) && $_GET['choix'] == 'listeCommentaire') {
+                    require '../../src/pages/adminInclude/commentaire/listeCommentaire.php';
                 }
             ?>
         </div>

@@ -18,7 +18,7 @@
         $commentaire = $_POST['commentaire'];
         envoyerCommentaires($articleId,$userId,$pseudo,$date,$commentaire);
     }
-    $listeCommentaire = getCommentaire($articleId);
+    $listeCommentaire = getCommentaireById($articleId);
 ?>
     <section class="pl-9 pr-9">
         <table>
@@ -78,12 +78,13 @@
                         </div>
                         <div class="contenuCommentaire">
                             <p><?=$value['contenu']?></p>
-                            <p><?php if ( isset($_SESSION['user']['role']) == 'admin' || (isset($_SESSION['user']['id']) == $value['auteurId'] && $value['auteurId'] != NULL)){echo '<i class="far fa-edit"></i>';}?></p>
                         </div>
+
                     </div>
 
                 <?php
             }
         }
     ?>
+    
     </section>

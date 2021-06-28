@@ -105,6 +105,7 @@ header nav ul li a:hover{
 #moreNewsArticle{
     padding: 5rem;
     display: flex;
+    max-width: 90%;
 }
 
 .MoreNewsArticleCard{
@@ -120,6 +121,39 @@ header nav ul li a:hover{
 
 .contenuMoreNews{
     font-size: 1rem;
+}
+
+.listArticle{
+    flex: 2;
+    background-color: #FF0036;
+    max-height: 100vh;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 3px rgb(0 0 0 / 27%)
+}
+
+.listArticle div{
+    display: flex;
+    padding:  0.3rem;
+    margin: 0.5rem;
+    border: 1px solid yellow;
+    background-color: black;
+    color: yellow;
+    box-shadow: 0px 10px 13px -7px #000000, 1px 2px 3px 3px rgba(0,0,0,0);
+}
+
+.listArticle div img{
+    width: 5rem!important;
+}
+
+.listArticle div h2{
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.listArticle div h2 a{
+    text-decoration: none;
+    color: yellow;
+
 }
 
 /* FOOTER */

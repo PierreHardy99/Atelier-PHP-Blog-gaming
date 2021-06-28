@@ -25,7 +25,21 @@ function getAvatar($userId){
     return $listeAvatar;
 }
 
-function getCommentaire($articleId){
+function getCommentaire(){
+    $pdo = connectDB();
+    $requete = $pdo->query('SELECT * FROM commentaires c') or die(print_r($requete->errorInfo(), TRUE));
+    if ($requete == false) {
+        echo 'Erreur dans la recherche';
+        exit();
+    }
+    while ($données = $requete->fetch()) {
+        $listeCommentaire[] = $données; 
+    }
+    $requete->closeCursor();
+    return $listeCommentaire;
+}
+
+function getCommentaireById($articleId){
     $pdo = connectDB();
     $requete = $pdo->prepare('SELECT * FROM commentaires WHERE articleId = ? ORDER BY dateCommentaire') or die(print_r($requete->errorInfo(), TRUE));
     $requete->execute(array($articleId));
@@ -41,6 +55,23 @@ function getCommentaire($articleId){
         return $listeCommentaire;
     }
     
+}
+
+function getCommentaireForAccount($id){
+    $pdo = connectDB();
+    $requete = $pdo->prepare('SELECT * FROM commentaires WHERE auteurId = ?') or die(print_r($requete->errorInfo(), TRUE));
+    $requete->execute(array($id));
+    if ($requete == false) {
+        echo 'Erreur dans la recherche';
+        exit();
+    }
+    while ($données = $requete->fetch()) {
+        $listeCommentaire[] = $données; 
+    }
+    $requete->closeCursor();
+    if (isset($listeCommentaire)) {
+        return $listeCommentaire;
+    }
 }
 
 ?>

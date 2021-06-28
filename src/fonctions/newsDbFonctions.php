@@ -16,7 +16,10 @@
         while($données = $requete->fetch()){
             $listOnTop[] = $données;
         }
-        return $listOnTop;
+        if (isset($listOnTop)) {
+            return $listOnTop;
+        }
+        
     }
 
     function getLastArticle(){
