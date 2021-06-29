@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 29 juin 2021 à 08:03
+-- Généré le : mar. 29 juin 2021 à 10:34
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -46,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `articles` (
   KEY `FK_CREE_PAR` (`auteurId`),
   KEY `FK_CONCERNE_JEU` (`gameId`),
   KEY `FK_CONSOLE_JOUABLE` (`hardId`)
-) ENGINE=MyISAM AUTO_INCREMENT=66 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=67 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `articles`
@@ -100,16 +100,15 @@ CREATE TABLE IF NOT EXISTS `commentaires` (
   PRIMARY KEY (`commentaireId`),
   KEY `FK_CONCERNE_ARTICLE` (`articleId`),
   KEY `FK_AUTEUR_COMMENTAIRE` (`auteurId`)
-) ENGINE=MyISAM AUTO_INCREMENT=55 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=60 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `commentaires`
 --
 
 INSERT INTO `commentaires` (`commentaireId`, `articleId`, `auteurId`, `pseudo`, `dateCommentaire`, `contenu`) VALUES
-(27, 62, 14, 'LeBelgeDuTurfu', '2021-06-27 11:25:03', 'Jamais deux sans trois'),
 (15, 62, NULL, 'barmenval ', '2021-06-27 11:16:05', 'Nullam velit lorem, dictum in nibh sed, varius malesuada dui. Donec quam ex, laoreet sit amet molestie et, bibendum sed magna. Curabitur ut fringilla dui. Mauris gravida nibh libero. Morbi ut dolor neque. Nam laoreet libero nec molestie tincidunt. Sed viverra vitae dui blandit interdum. Vivamus et tristique mauris. Praesent condimentum in mauris accumsan dapibus. Cras venenatis arcu ac venenatis vestibulum.'),
-(25, 62, 14, 'LeBelgeDuTurfu', '2021-06-27 11:24:51', 'Commentaire test'),
+(57, 60, 14, 'LeBelgeDuTurfu', '2021-06-29 10:31:23', 'Coucou'),
 (26, 62, 14, 'LeBelgeDuTurfu', '2021-06-27 11:24:57', 'Commentaire test 1'),
 (14, 62, NULL, 'netrabord', '2021-06-27 11:15:51', 'Donec porttitor, turpis non mollis pellentesque, sem tortor molestie libero, et rutrum turpis elit sit amet ante. Vivamus laoreet facilisis laoreet. Nunc dictum quis lorem porttitor sodales. Nulla rhoncus suscipit massa, eget elementum felis ornare in. Integer ligula velit, blandit id hendrerit et, ornare a leo. In sed odio et sapien facilisis dignissim. Vestibulum vitae arcu blandit, gravida nisl vitae, egestas lacus.'),
 (16, 62, NULL, 'vercugie', '2021-06-27 11:16:24', 'Sed sit amet purus sodales nunc sollicitudin tempor. Donec interdum aliquet nisi, vitae ullamcorper magna finibus at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam congue ultrices feugiat. Nam semper quam non lacus facilisis, et pretium dolor porttitor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam in consequat lacus. Duis sed arcu tempus, vestibulum dui eu, accumsan sapien. Integer vitae dolor quis magna eleifend ornare mattis vitae tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce commodo leo sed metus commodo, vel hendrerit justo tristique. Nullam a ornare velit, vel semper urna. Nunc non tortor nec sapien interdum pulvinar at vitae ligula.'),
@@ -119,6 +118,7 @@ INSERT INTO `commentaires` (`commentaireId`, `articleId`, `auteurId`, `pseudo`, 
 (20, 59, NULL, 'sobot', '2021-06-27 11:20:48', 'Etiam euismod nunc sed felis aliquam venenatis. Nullam quis molestie felis, eget cursus tellus. Sed laoreet ligula neque, sed porttitor arcu tincidunt vitae. Donec molestie ligula vitae metus aliquam, sit amet rutrum augue imperdiet. Nulla ullamcorper diam quis diam fringilla vehicula. Nullam ultricies tellus et lobortis porttitor. Donec in purus tellus. Vivamus euismod nulla neque, nec efficitur magna pulvinar eu. Praesent auctor vehicula ligula, ut elementum enim volutpat sed. Pellentesque luctus consectetur velit eget elementum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis justo justo, luctus vitae urna sit amet, molestie fermentum sem. Phasellus dictum, felis id tempor scelerisque, quam eros lobortis nulla, non dapibus lacus odio ut nibh. Aliquam dui est, lacinia sit amet cursus id, imperdiet at nisi. Cras vel purus eu enim fringilla consequat sed at tortor.'),
 (22, 59, NULL, 'lolib', '2021-06-27 11:22:28', 'Aliquam consequat ante eu urna efficitur, blandit gravida metus placerat. Etiam volutpat malesuada lectus. Pellentesque nec purus a erat aliquam laoreet quis id metus. Vestibulum maximus ultrices dui ac finibus. Vestibulum euismod sodales dui, sed dapibus orci vestibulum eget. Aliquam a nibh accumsan, bibendum urna nec, tincidunt mi. Integer eu elit elit. In sed rutrum mi. Nulla porttitor mollis auctor. Sed ut semper purus. Suspendisse non vehicula metus. Donec vitae velit ante. Duis ullamcorper ligula a convallis pulvinar. Aliquam in metus quis purus lobortis convallis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent a viverra metus, eu volutpat massa.'),
 (24, 59, NULL, 'fonlabu', '2021-06-27 11:23:04', 'Donec vehicula eu justo quis varius. Nullam non nibh non ipsum pharetra pulvinar. Sed a ligula sit amet dolor aliquam mattis. Proin auctor egestas elit, at ullamcorper leo tristique id. Nunc rutrum metus ac nulla ornare bibendum. Nulla lacus eros, pretium in auctor sit amet, suscipit sollicitudin magna. Curabitur vel leo euismod, ultrices nisi non, semper augue. Sed quis sodales nisi. Nunc in facilisis nulla. Praesent eu laoreet lectus. Quisque pulvinar convallis tortor, quis pellentesque mauris tempus eu.'),
+(58, 65, NULL, 'Jedusor', '2021-06-29 10:31:53', 'Je serais ton pire ennemie Harry !'),
 (28, 61, 14, 'LeBelgeDuTurfu', '2021-06-27 11:25:21', 'Commentaire test'),
 (29, 61, 14, 'LeBelgeDuTurfu', '2021-06-27 11:25:33', 'Commentaire test 1'),
 (30, 61, 14, 'LeBelgeDuTurfu', '2021-06-27 11:25:40', 'Jamais deux sans trois'),
@@ -132,8 +132,8 @@ INSERT INTO `commentaires` (`commentaireId`, `articleId`, `auteurId`, `pseudo`, 
 (38, 60, 14, 'LeBelgeDuTurfu', '2021-06-27 11:26:52', 'Commentaire test 1'),
 (39, 60, 14, 'LeBelgeDuTurfu', '2021-06-27 11:27:35', 'Jamais deux sans trois'),
 (40, 57, 14, 'LeBelgeDuTurfu', '2021-06-27 11:28:11', 'Commentaire test'),
-(41, 57, 6, 'LeBelgeDuTurfu', '2021-06-27 11:28:15', 'Commentaire test 1'),
-(42, 57, 6, 'LeBelgeDuTurfu', '2021-06-27 11:28:23', 'Jamais deux sans trois'),
+(41, 57, 14, 'LeBelgeDuTurfu', '2021-06-27 11:28:15', 'Commentaire test 1'),
+(42, 57, 14, 'LeBelgeDuTurfu', '2021-06-27 11:28:23', 'Jamais deux sans trois'),
 (43, 63, NULL, 'pamomen ', '2021-06-27 11:29:45', 'Proin semper sagittis sem, vel bibendum neque vulputate at. Proin nec ullamcorper neque, ac laoreet felis. Nullam tempus tincidunt odio eget sagittis. Cras accumsan pretium pretium. Donec at malesuada purus. Curabitur ac risus justo. Suspendisse potenti. Quisque a justo est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam consequat pellentesque faucibus. Duis placerat consequat eros, in aliquet purus. Nullam risus ex, tempor rutrum velit eu, dignissim viverra nibh. Duis ut lacinia lacus, eu malesuada augue.'),
 (44, 63, NULL, 'fuya', '2021-06-27 11:30:41', 'Curabitur eu mauris euismod, ornare lorem in, rutrum sapien. Donec vitae felis tortor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam felis ante, congue ut dui nec, congue elementum quam. Morbi faucibus metus id mi interdum, quis bibendum lacus egestas. Donec eget accumsan tortor. Proin tempor tristique justo non rutrum.'),
 (45, 63, NULL, 'teola', '2021-06-27 11:30:56', 'Fusce a ligula egestas, vulputate arcu sit amet, volutpat velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sed leo dolor. Praesent mollis interdum urna at ultricies. Ut quis sollicitudin est. Aliquam sollicitudin libero vitae aliquet rutrum. In dignissim nisi nec sapien imperdiet malesuada.'),
@@ -143,7 +143,9 @@ INSERT INTO `commentaires` (`commentaireId`, `articleId`, `auteurId`, `pseudo`, 
 (49, 57, NULL, 'jabar', '2021-06-27 11:33:48', 'Proin rhoncus interdum lobortis. Mauris a mauris at dui consequat posuere a in lorem. Maecenas dolor velit, volutpat quis suscipit at, porttitor in sapien. Donec convallis laoreet tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris iaculis ullamcorper est ac maximus. Donec ac sagittis eros, at porta elit. Maecenas ut vestibulum mauris. Curabitur mi dolor, egestas pulvinar sem ut, molestie tempus lacus. Donec ultricies a erat lobortis sollicitudin. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas commodo magna id ex iaculis aliquam. Curabitur accumsan lectus diam, in varius turpis ultricies eu. Fusce id massa mattis, tempus tortor sit amet, auctor lacus.'),
 (50, 57, NULL, 'saterjet', '2021-06-27 11:34:08', 'Nulla mollis mauris eu erat ornare, at dictum urna suscipit. Nunc ac condimentum sapien. Quisque in eros orci. Proin quis rhoncus justo. Donec eu vulputate sapien, hendrerit elementum felis. Nam id condimentum sapien, quis sollicitudin nisl. Nunc hendrerit eros at suscipit gravida. Ut nisl tortor, imperdiet sit amet sodales a, molestie eu enim. Donec efficitur, felis vel luctus dignissim, odio elit posuere leo, nec interdum eros libero sit amet massa. Pellentesque non sem ac turpis lacinia dignissim. Curabitur enim diam, imperdiet eu ligula id, condimentum consectetur lectus. Proin et euismod ipsum. Ut sit amet pharetra arcu.'),
 (51, 57, NULL, 'tordo', '2021-06-27 11:34:23', 'Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus lacinia eros massa, id convallis massa efficitur eget. Suspendisse volutpat libero eu dui tempor aliquet. Etiam pellentesque est purus, sed congue risus rutrum in. Sed mollis accumsan nunc. Nam sed tincidunt lectus, eget sollicitudin est. Donec varius sapien diam, sed facilisis mauris congue sit amet. Suspendisse iaculis ultrices elit ut viverra. Donec enim neque, malesuada ut urna condimentum, convallis imperdiet lorem. Morbi ultrices libero sapien, quis euismod purus venenatis in. Sed et lectus ornare, consectetur ex ac, consequat urna. Donec eu scelerisque velit, ac pulvinar nisl. Duis aliquam diam dolor, quis gravida ante pulvinar eget. Aliquam elementum lacus hendrerit, porttitor libero vitae, tincidunt enim. In viverra viverra mauris, id vestibulum urna tempus sed. Nunc at nulla vulputate, pulvinar turpis vestibulum, vehicula dolor.'),
-(52, 65, 6, 'LeBelgeDuTurfu', '2021-06-27 12:03:48', 'Hâte que ça sorte ! ');
+(56, 65, 14, 'LeBelgeDuTurfu', '2021-06-29 09:49:07', 'Test'),
+(55, 61, 14, 'LeBelgeDuTurfu', '2021-06-29 08:50:25', 'Cool !'),
+(59, 65, NULL, 'Harry Potter', '2021-06-29 10:32:31', '*Prend sa baguette* Stupefix !');
 
 -- --------------------------------------------------------
 
@@ -314,14 +316,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   `actif` int(11) DEFAULT NULL,
   PRIMARY KEY (`userId`),
   KEY `FK_ROLE_DEFINI` (`roleId`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `users`
 --
 
 INSERT INTO `users` (`userId`, `avatar`, `login`, `nom`, `prenom`, `email`, `mdp`, `roleId`, `ban`, `clef`, `actif`) VALUES
-(14, '../../src/img/avatar/1624905176lebelgeduturfu.png', 'LeBelgeDuTurfu', 'Hardy', 'Pierre', 'pierre.hardy1999@gmail.com', '2655e96c3ed196614dbfb765b6f45ba97b2df71f2711f3fd', 1, '7b2df71f2711f3fd', '3f088a03a8ce00a55cab884619a0eed2', 1);
+(14, '../../src/img/avatar/1624905176lebelgeduturfu.png', 'LeBelgeDuTurfu', 'Hardy', 'Pierre', 'pierre.hardy1999@gmail.com', '2655e96c3ed196614dbfb765b6f45ba97b2df71f2711f3fd', 1, '7b2df71f2711f3fd', '0', 1);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
