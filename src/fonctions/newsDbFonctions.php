@@ -16,6 +16,7 @@
         while($données = $requete->fetch()){
             $listOnTop[] = $données;
         }
+        $requete->closeCursor();
         if (isset($listOnTop)) {
             return $listOnTop;
         }
@@ -35,6 +36,7 @@
         while($données = $requete->fetch()){
             $listLastArticle[] = $données;
         }
+        $requete->closeCursor();
         return $listLastArticle;
     }
     

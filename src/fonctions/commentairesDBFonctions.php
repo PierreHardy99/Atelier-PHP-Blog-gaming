@@ -16,7 +16,7 @@ function envoyerCommentaires($articleId,$auteurId,$pseudo,$dateCommentaire,$comm
 
 function getAvatar($userId){
     $pdo = connectDB();
-    $requete = $pdo->prepare('SELECT avatar FROM users u where userId = ?');
+    $requete = $pdo->prepare('SELECT avatar FROM users where userId = ?');
     $requete->execute(array($userId)) or die(print_r($requete->errorInfo(), TRUE));
     while ($données = $requete->fetch()) {
         $listeAvatar = $données[0]; 

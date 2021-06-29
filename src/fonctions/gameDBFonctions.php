@@ -7,6 +7,7 @@
                                 INNER JOIN gameCategory g ON j.gameCategoryId = g.gameCategoryId") or die(print_r($requete->errorInfo(), TRUE));
 
         $listGame = $requete->fetchAll();
+        $requete->closeCursor();
         return $listGame;
     }
     // Rechercher toutes les genres

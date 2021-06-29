@@ -64,6 +64,7 @@
         while($données = $requete->fetch()){
             $listOnTop[] = $données;
         }
+        $requete->closeCursor();
         if (isset($listOnTop)) {
             return $listOnTop;
         }
@@ -92,5 +93,31 @@
             return $listeCommentaire;
         }
         
+    }
+
+    function getArticleAdmin(){
+        $pdo = connectDB();
+        $requete = $pdo->query('SELECT a.articleId, a.titre, a.imgUrl,a.content, a.date,c.nomCategorie,gc.genre, u.nom,u.prenom,j.nom AS jeu,h.console,a.star
+                                  FROM articles a
+                                  INNER JOIN categorie c ON c.categorieId = a.categorieId
+                                  INNER JOIN gameCategory gc ON gc.gameCategoryId = a.gameCategorieId
+                                  INNER JOIN users u ON u.userId = a.auteurId
+                                  INNER JOIN jeux j ON j.gameId = a.gameId
+                                  INNER JOIN hardware h ON h.hardId = a.hardId') or die(print_r($requete->errorInfo(), TRUE));
+        while ($données = $requete->fetch()) {
+            $listeArticle[] = $données; 
+        }
+        $requete->closeCursor();
+        if (isset($listeArticle)) {
+            return $listeArticle;
+        }
+        
+    }
+
+    function delArticle($id){
+        $pdo = connectDB();
+        $requete = $pdo->prepare('DELETE FROM articles WHERE articleId = ?');
+        $requete->execute(array($id)) or die(print_r($requete->errorInfo(), TRUE));
+        $requete->closeCursor();
     }
 ?>

@@ -44,4 +44,13 @@
         $requete->closeCursor();
     }
 
+    function banUser($id){
+        $pdo = connectDB();
+        $requete = $pdo->prepare('UPDATE users 
+                                  set ban = null
+                                  where userId = ?');
+        $requete->execute(array($id));
+        $requete->closeCursor();
+    }
+
 ?>

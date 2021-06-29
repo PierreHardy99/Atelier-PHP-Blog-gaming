@@ -15,6 +15,7 @@
         while($données = $requete->fetch()){
             $contenuArticle[] = $données;
         }
+        $requete->closeCursor();
         
         // Si l'id envoyé par le user existe, je retourne les données recues par la requete
         if ($contenuArticle) {

@@ -71,6 +71,7 @@
                 
             }
         }
+        $requete->closeCursor();
         // Si mon script arrive ici, il est sorti de ma boucle sans trouver de user
         header("location: ../../src/pages/login.php?erreur=Identifiant inconnu, veuillez recommencer!");
         exit();
@@ -101,7 +102,7 @@
     function actifAccount($id){
         $pdo = connectDB();
         $requete = $pdo->prepare('UPDATE users
-                                  SET actif = 1
+                                  SET actif = 1, clef = 0
                                   WHERE userId = ?');
         $requete->execute(array($id));
         $requete->closeCursor();

@@ -15,7 +15,7 @@
         }
         
         $date = date('Y-m-d H:i:s');
-        $commentaire = $_POST['commentaire'];
+        $commentaire = htmlspecialchars($_POST['commentaire']);
         envoyerCommentaires($articleId,$userId,$pseudo,$date,$commentaire);
     }
     $listeCommentaire = getCommentaireById($articleId);

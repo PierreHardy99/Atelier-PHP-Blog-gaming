@@ -1,4 +1,5 @@
 <?php 
+    require '../../src/fonctions/dbFonctions.php';
 // Vérif l'url envoié par le mail si c'est pas vide
 if ( isset($_GET['user']) && isset($_GET['clef'])) {
 

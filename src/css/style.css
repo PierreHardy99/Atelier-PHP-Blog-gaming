@@ -325,6 +325,11 @@ input[type=file]::-webkit-file-upload-button {
     width: 100%;
 }
 
+.gestionCategorie .scroller {
+    overflow-y: scroll;
+    width: 20px;
+}
+
 /* REDIGER ARTICLE */
 .redigerArticle{
     width: 75%;
