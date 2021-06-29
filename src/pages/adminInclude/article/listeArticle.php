@@ -22,6 +22,7 @@
         <thead>
             <tr>
                 <th colspan="2">Liste des articles</th>
+                <th colspan="2"><a href="../../src/pages/articles.php?choix=redigerArticle">Ajouter un article</a></th>
             </tr>
         </thead>
         <tbody>
