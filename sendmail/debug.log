@@ -1,0 +1,472 @@
+21-06-28 18:46:38 ** --- MESSAGE BEGIN ---
+21-06-28 18:46:38 ** To: pierre.hardy1999@gmail.com
+21-06-28 18:46:39 ** Subject: Email de test
+21-06-28 18:46:39 ** From: brousselicorne@gmail.com
+21-06-28 18:46:39 ** 
+21-06-28 18:46:39 ** Salut ceci est un email de test envoyer par un script PHP
+21-06-28 18:46:39 ** --- MESSAGE END ---
+21-06-28 18:46:39 ** Connecting to smtp.gmail.com:587
+21-06-28 18:46:39 ** Connected.
+21-06-28 18:46:39 << 220 smtp.gmail.com ESMTP i3sm6442141edk.37 - gsmtp<EOL>
+21-06-28 18:46:39 >> EHLO Pierre-pc<EOL>
+21-06-28 18:46:39 << 250-smtp.gmail.com at your service, [213.49.162.166]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-STARTTLS<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21-06-28 18:46:39 ** Authenticating as brousselicorne@gmail.com
+21-06-28 18:46:39 >> STARTTLS<EOL>
+21-06-28 18:46:39 << 220 2.0.0 Ready to start TLS<EOL>
+21-06-28 18:46:39 >> EHLO Pierre-pc<EOL>
+21-06-28 18:46:39 << 250-smtp.gmail.com at your service, [213.49.162.166]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21-06-28 18:46:39 >> AUTH LOGIN<EOL>
+21-06-28 18:46:39 << 334 VXNlcm5hbWU6<EOL>
+21-06-28 18:46:39 >> YnJvdXNzZWxpY29ybmVAZ21haWwuY29t<EOL>
+21-06-28 18:46:39 << 334 UGFzc3dvcmQ6<EOL>
+21-06-28 18:46:39 >> Zm43WGZuN1hmbjdYZm4=<EOL>
+21-06-28 18:46:39 << 235 2.7.0 Accepted<EOL>
+21-06-28 18:46:39 >> MAIL FROM: <brousselicorne@gmail.com><EOL>
+21-06-28 18:46:39 << 250 2.1.0 OK i3sm6442141edk.37 - gsmtp<EOL>
+21-06-28 18:46:39 >> RCPT TO: <pierre.hardy1999@gmail.com><EOL>
+21-06-28 18:46:39 << 250 2.1.5 OK i3sm6442141edk.37 - gsmtp<EOL>
+21-06-28 18:46:39 >> DATA<EOL>
+21-06-28 18:46:40 << 354  Go ahead i3sm6442141edk.37 - gsmtp<EOL>
+21-06-28 18:46:40 >> Date: Mon, 28 Jun 2021 18:46:40 +0200<EOL>
+21-06-28 18:46:40 >> To: pierre.hardy1999@gmail.com<EOL>
+21-06-28 18:46:40 >> Subject: Email de test<EOL>
+21-06-28 18:46:40 >> From: brousselicorne@gmail.com<EOL>
+21-06-28 18:46:40 >> <EOL>
+21-06-28 18:46:40 >> Salut ceci est un email de test envoyer par un script PHP<EOL>
+21-06-28 18:46:40 >> .<EOL>
+21-06-28 18:46:40 << 250 2.0.0 OK  1624898800 i3sm6442141edk.37 - gsmtp<EOL>
+21-06-28 18:46:40 >> QUIT<EOL>
+21-06-28 18:46:40 << 221 2.0.0 closing connection i3sm6442141edk.37 - gsmtp<EOL>
+21-06-28 18:46:40 ** Disconnecting from smtp.gmail.com:587
+21-06-28 18:46:40 ** Disconnected.
+21-06-28 18:46:40 ** Disconnected.
+21-06-28 18:46:44 ** --- MESSAGE BEGIN ---
+21-06-28 18:46:44 ** To: pierre.hardy1999@gmail.com
+21-06-28 18:46:44 ** Subject: Email de test
+21-06-28 18:46:44 ** From: brousselicorne@gmail.com
+21-06-28 18:46:44 ** 
+21-06-28 18:46:44 ** Salut ceci est un email de test envoyer par un script PHP
+21-06-28 18:46:44 ** --- MESSAGE END ---
+21-06-28 18:46:44 ** Connecting to smtp.gmail.com:587
+21-06-28 18:46:45 ** Connected.
+21-06-28 18:46:45 << 220 smtp.gmail.com ESMTP g15sm7093499ejb.103 - gsmtp<EOL>
+21-06-28 18:46:45 >> EHLO Pierre-pc<EOL>
+21-06-28 18:46:45 << 250-smtp.gmail.com at your service, [213.49.162.166]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-STARTTLS<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21-06-28 18:46:45 ** Authenticating as brousselicorne@gmail.com
+21-06-28 18:46:45 >> STARTTLS<EOL>
+21-06-28 18:46:45 << 220 2.0.0 Ready to start TLS<EOL>
+21-06-28 18:46:45 >> EHLO Pierre-pc<EOL>
+21-06-28 18:46:45 << 250-smtp.gmail.com at your service, [213.49.162.166]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21-06-28 18:46:45 >> AUTH LOGIN<EOL>
+21-06-28 18:46:45 << 334 VXNlcm5hbWU6<EOL>
+21-06-28 18:46:45 >> YnJvdXNzZWxpY29ybmVAZ21haWwuY29t<EOL>
+21-06-28 18:46:45 << 334 UGFzc3dvcmQ6<EOL>
+21-06-28 18:46:45 >> Zm43WGZuN1hmbjdYZm4=<EOL>
+21-06-28 18:46:45 << 235 2.7.0 Accepted<EOL>
+21-06-28 18:46:45 >> MAIL FROM: <brousselicorne@gmail.com><EOL>
+21-06-28 18:46:45 << 250 2.1.0 OK g15sm7093499ejb.103 - gsmtp<EOL>
+21-06-28 18:46:45 >> RCPT TO: <pierre.hardy1999@gmail.com><EOL>
+21-06-28 18:46:45 << 250 2.1.5 OK g15sm7093499ejb.103 - gsmtp<EOL>
+21-06-28 18:46:45 >> DATA<EOL>
+21-06-28 18:46:45 << 354  Go ahead g15sm7093499ejb.103 - gsmtp<EOL>
+21-06-28 18:46:45 >> Date: Mon, 28 Jun 2021 18:46:45 +0200<EOL>
+21-06-28 18:46:45 >> To: pierre.hardy1999@gmail.com<EOL>
+21-06-28 18:46:45 >> Subject: Email de test<EOL>
+21-06-28 18:46:45 >> From: brousselicorne@gmail.com<EOL>
+21-06-28 18:46:45 >> <EOL>
+21-06-28 18:46:45 >> Salut ceci est un email de test envoyer par un script PHP<EOL>
+21-06-28 18:46:45 >> .<EOL>
+21-06-28 18:46:45 << 250 2.0.0 OK  1624898806 g15sm7093499ejb.103 - gsmtp<EOL>
+21-06-28 18:46:45 >> QUIT<EOL>
+21-06-28 18:46:45 << 221 2.0.0 closing connection g15sm7093499ejb.103 - gsmtp<EOL>
+21-06-28 18:46:45 ** Disconnecting from smtp.gmail.com:587
+21-06-28 18:46:45 ** Disconnected.
+21-06-28 18:46:45 ** Disconnected.
+21-06-28 20:11:48 ** --- MESSAGE BEGIN ---
+21-06-28 20:11:48 ** To: pierre.hardy1999@gmail.com
+21-06-28 20:11:48 ** Subject: Activation du compte
+21-06-28 20:11:48 ** From: brousselicorne@gmail.com
+21-06-28 20:11:48 ** 
+21-06-28 20:11:48 ** <h2>BonjourLeBelgeDuTurfu,</h2> 
+21-06-28 20:11:48 **                  <p>votre compte a bien été crée, veuillez cliquez sur le lien ci-dessous pour activer votre compte !</p>
+21-06-28 20:11:48 **                  <a href="localhost/activation.php?user=<?=$login?>&clef=<?=$clef?>" target="_blank">Activer votre compte !</a>
+21-06-28 20:11:48 ** --- MESSAGE END ---
+21-06-28 20:11:49 ** Connecting to smtp.gmail.com:587
+21-06-28 20:11:49 ** Connected.
+21-06-28 20:11:49 << 220 smtp.gmail.com ESMTP v5sm9925934edt.55 - gsmtp<EOL>
+21-06-28 20:11:49 >> EHLO Pierre-pc<EOL>
+21-06-28 20:11:49 << 250-smtp.gmail.com at your service, [213.49.162.166]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-STARTTLS<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21-06-28 20:11:49 ** Authenticating as brousselicorne@gmail.com
+21-06-28 20:11:49 >> STARTTLS<EOL>
+21-06-28 20:11:49 << 220 2.0.0 Ready to start TLS<EOL>
+21-06-28 20:11:49 >> EHLO Pierre-pc<EOL>
+21-06-28 20:11:49 << 250-smtp.gmail.com at your service, [213.49.162.166]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21-06-28 20:11:49 >> AUTH LOGIN<EOL>
+21-06-28 20:11:49 << 334 VXNlcm5hbWU6<EOL>
+21-06-28 20:11:49 >> YnJvdXNzZWxpY29ybmVAZ21haWwuY29t<EOL>
+21-06-28 20:11:49 << 334 UGFzc3dvcmQ6<EOL>
+21-06-28 20:11:49 >> Zm43WGZuN1hmbjdYZm4=<EOL>
+21-06-28 20:11:49 << 235 2.7.0 Accepted<EOL>
+21-06-28 20:11:49 >> MAIL FROM: <brousselicorne@gmail.com><EOL>
+21-06-28 20:11:49 << 250 2.1.0 OK v5sm9925934edt.55 - gsmtp<EOL>
+21-06-28 20:11:49 >> RCPT TO: <pierre.hardy1999@gmail.com><EOL>
+21-06-28 20:11:49 << 250 2.1.5 OK v5sm9925934edt.55 - gsmtp<EOL>
+21-06-28 20:11:49 >> DATA<EOL>
+21-06-28 20:11:49 << 354  Go ahead v5sm9925934edt.55 - gsmtp<EOL>
+21-06-28 20:11:49 >> Date: Mon, 28 Jun 2021 20:11:49 +0200<EOL>
+21-06-28 20:11:49 >> To: pierre.hardy1999@gmail.com<EOL>
+21-06-28 20:11:49 >> Subject: Activation du compte<EOL>
+21-06-28 20:11:49 >> From: brousselicorne@gmail.com<EOL>
+21-06-28 20:11:49 >> <EOL>
+21-06-28 20:11:49 >> <h2>BonjourLeBelgeDuTurfu,</h2> <EOL>
+21-06-28 20:11:49 >>                  <p>votre compte a bien été crée, veuillez cliquez sur le lien ci-dessous pour activer votre compte !</p><EOL>
+21-06-28 20:11:49 >>                  <a href="localhost/activation.php?user=<?=$login?>&clef=<?=$clef?>" target="_blank">Activer votre compte !</a><EOL>
+21-06-28 20:11:49 >> .<EOL>
+21-06-28 20:11:50 << 250 2.0.0 OK  1624903910 v5sm9925934edt.55 - gsmtp<EOL>
+21-06-28 20:11:50 >> QUIT<EOL>
+21-06-28 20:11:50 << 221 2.0.0 closing connection v5sm9925934edt.55 - gsmtp<EOL>
+21-06-28 20:11:50 ** Disconnecting from smtp.gmail.com:587
+21-06-28 20:11:50 ** Disconnected.
+21-06-28 20:11:50 ** Disconnected.
+21-06-28 20:29:25 ** --- MESSAGE BEGIN ---
+21-06-28 20:29:25 ** To: 
+21-06-28 20:29:25 ** Subject: Activation du compte
+21-06-28 20:29:25 ** From: brousselicorne@gmail.com
+21-06-28 20:29:25 ** 
+21-06-28 20:29:25 ** <!DOCTYPE html>
+21-06-28 20:29:25 **              <html lang="en">
+21-06-28 20:29:25 **              <head>
+21-06-28 20:29:25 **                  <meta charset="UTF-8">
+21-06-28 20:29:25 **                  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+21-06-28 20:29:25 **                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+21-06-28 20:29:25 **                  <title>Document</title>
+21-06-28 20:29:25 **              </head>
+21-06-28 20:29:25 **              <body>
+21-06-28 20:29:25 **                 <h2>Bonjour,</h2> 
+21-06-28 20:29:25 **                 <p>votre compte a bien été crée, veuillez cliquez sur le lien ci-dessous pour activer votre compte !</p>
+21-06-28 20:29:25 **              </body>
+21-06-28 20:29:25 **              </html>
+21-06-28 20:29:25 ** --- MESSAGE END ---
+21-06-28 20:29:25 ** Message is missing recipient's address
+21-06-28 20:29:58 ** --- MESSAGE BEGIN ---
+21-06-28 20:29:58 ** To: pierre.hardy1999@gmail.com
+21-06-28 20:29:58 ** Subject: Activation du compte
+21-06-28 20:29:58 ** From: brousselicorne@gmail.com
+21-06-28 20:29:58 ** 
+21-06-28 20:29:58 ** <!DOCTYPE html>
+21-06-28 20:29:58 **              <html lang="en">
+21-06-28 20:29:58 **              <head>
+21-06-28 20:29:58 **                  <meta charset="UTF-8">
+21-06-28 20:29:58 **                  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+21-06-28 20:29:58 **                  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+21-06-28 20:29:58 **                  <title>Document</title>
+21-06-28 20:29:58 **              </head>
+21-06-28 20:29:58 **              <body>
+21-06-28 20:29:58 **                 <h2>Bonjour</h2> 
+21-06-28 20:29:58 **                 <p>votre compte a bien été crée, veuillez cliquez sur le lien ci-dessous pour activer votre compte !</p>
+21-06-28 20:29:58 **              </body>
+21-06-28 20:29:58 **              </html>
+21-06-28 20:29:58 ** --- MESSAGE END ---
+21-06-28 20:29:58 ** Connecting to smtp.gmail.com:587
+21-06-28 20:29:59 ** Connected.
+21-06-28 20:29:59 << 220 smtp.gmail.com ESMTP p24sm5107130ejn.83 - gsmtp<EOL>
+21-06-28 20:29:59 >> EHLO Pierre-pc<EOL>
+21-06-28 20:29:59 << 250-smtp.gmail.com at your service, [213.49.162.166]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-STARTTLS<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21-06-28 20:29:59 ** Authenticating as brousselicorne@gmail.com
+21-06-28 20:29:59 >> STARTTLS<EOL>
+21-06-28 20:29:59 << 220 2.0.0 Ready to start TLS<EOL>
+21-06-28 20:29:59 >> EHLO Pierre-pc<EOL>
+21-06-28 20:29:59 << 250-smtp.gmail.com at your service, [213.49.162.166]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21-06-28 20:29:59 >> AUTH LOGIN<EOL>
+21-06-28 20:29:59 << 334 VXNlcm5hbWU6<EOL>
+21-06-28 20:29:59 >> YnJvdXNzZWxpY29ybmVAZ21haWwuY29t<EOL>
+21-06-28 20:29:59 << 334 UGFzc3dvcmQ6<EOL>
+21-06-28 20:29:59 >> Zm43WGZuN1hmbjdYZm4=<EOL>
+21-06-28 20:29:59 << 235 2.7.0 Accepted<EOL>
+21-06-28 20:29:59 >> MAIL FROM: <brousselicorne@gmail.com><EOL>
+21-06-28 20:29:59 << 250 2.1.0 OK p24sm5107130ejn.83 - gsmtp<EOL>
+21-06-28 20:29:59 >> RCPT TO: <pierre.hardy1999@gmail.com><EOL>
+21-06-28 20:29:59 << 250 2.1.5 OK p24sm5107130ejn.83 - gsmtp<EOL>
+21-06-28 20:29:59 >> DATA<EOL>
+21-06-28 20:29:59 << 354  Go ahead p24sm5107130ejn.83 - gsmtp<EOL>
+21-06-28 20:29:59 >> Date: Mon, 28 Jun 2021 20:29:59 +0200<EOL>
+21-06-28 20:29:59 >> To: pierre.hardy1999@gmail.com<EOL>
+21-06-28 20:29:59 >> Subject: Activation du compte<EOL>
+21-06-28 20:29:59 >> From: brousselicorne@gmail.com<EOL>
+21-06-28 20:29:59 >> <EOL>
+21-06-28 20:29:59 >> <!DOCTYPE html><EOL>
+21-06-28 20:29:59 >>              <html lang="en"><EOL>
+21-06-28 20:29:59 >>              <head><EOL>
+21-06-28 20:29:59 >>                  <meta charset="UTF-8"><EOL>
+21-06-28 20:29:59 >>                  <meta http-equiv="X-UA-Compatible" content="IE=edge"><EOL>
+21-06-28 20:29:59 >>                  <meta name="viewport" content="width=device-width, initial-scale=1.0"><EOL>
+21-06-28 20:29:59 >>                  <title>Document</title><EOL>
+21-06-28 20:29:59 >>              </head><EOL>
+21-06-28 20:29:59 >>              <body><EOL>
+21-06-28 20:29:59 >>                 <h2>Bonjour</h2> <EOL>
+21-06-28 20:29:59 >>                 <p>votre compte a bien été crée, veuillez cliquez sur le lien ci-dessous pour activer votre compte !</p><EOL>
+21-06-28 20:29:59 >>              </body><EOL>
+21-06-28 20:29:59 >>              </html><EOL>
+21-06-28 20:29:59 >> .<EOL>
+21-06-28 20:29:59 << 250 2.0.0 OK  1624905000 p24sm5107130ejn.83 - gsmtp<EOL>
+21-06-28 20:29:59 >> QUIT<EOL>
+21-06-28 20:30:00 << 221 2.0.0 closing connection p24sm5107130ejn.83 - gsmtp<EOL>
+21-06-28 20:30:00 ** Disconnecting from smtp.gmail.com:587
+21-06-28 20:30:00 ** Disconnected.
+21-06-28 20:30:00 ** Disconnected.
+21-06-28 20:32:56 ** --- MESSAGE BEGIN ---
+21-06-28 20:32:56 ** To: pierre.hardy1999@gmail.com
+21-06-28 20:32:56 ** Subject: Activation du compte
+21-06-28 20:32:56 ** From: brousselicorne@gmail.com
+21-06-28 20:32:56 ** 
+21-06-28 20:32:56 ** <h2>BonjourLeBelgeDuTurfu,</h2> 
+21-06-28 20:32:56 **                  <p>votre compte a bien été crée, veuillez cliquez sur le lien ci-dessous pour activer votre compte !</p>
+21-06-28 20:32:56 **                  <a href="localhost/activation.php?user=<?=$login?>&clef=<?=$clef?>" target="_blank">Activer votre compte !</a>
+21-06-28 20:32:56 ** --- MESSAGE END ---
+21-06-28 20:32:56 ** Connecting to smtp.gmail.com:587
+21-06-28 20:32:57 ** Connected.
+21-06-28 20:32:57 << 220 smtp.gmail.com ESMTP yd25sm7193846ejb.114 - gsmtp<EOL>
+21-06-28 20:32:57 >> EHLO Pierre-pc<EOL>
+21-06-28 20:32:57 << 250-smtp.gmail.com at your service, [213.49.162.166]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-STARTTLS<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21-06-28 20:32:57 ** Authenticating as brousselicorne@gmail.com
+21-06-28 20:32:57 >> STARTTLS<EOL>
+21-06-28 20:32:57 << 220 2.0.0 Ready to start TLS<EOL>
+21-06-28 20:32:57 >> EHLO Pierre-pc<EOL>
+21-06-28 20:32:57 << 250-smtp.gmail.com at your service, [213.49.162.166]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21-06-28 20:32:57 >> AUTH LOGIN<EOL>
+21-06-28 20:32:57 << 334 VXNlcm5hbWU6<EOL>
+21-06-28 20:32:57 >> YnJvdXNzZWxpY29ybmVAZ21haWwuY29t<EOL>
+21-06-28 20:32:57 << 334 UGFzc3dvcmQ6<EOL>
+21-06-28 20:32:57 >> Zm43WGZuN1hmbjdYZm4=<EOL>
+21-06-28 20:32:57 << 235 2.7.0 Accepted<EOL>
+21-06-28 20:32:57 >> MAIL FROM: <brousselicorne@gmail.com><EOL>
+21-06-28 20:32:57 << 250 2.1.0 OK yd25sm7193846ejb.114 - gsmtp<EOL>
+21-06-28 20:32:57 >> RCPT TO: <pierre.hardy1999@gmail.com><EOL>
+21-06-28 20:32:57 << 250 2.1.5 OK yd25sm7193846ejb.114 - gsmtp<EOL>
+21-06-28 20:32:57 >> DATA<EOL>
+21-06-28 20:32:57 << 354  Go ahead yd25sm7193846ejb.114 - gsmtp<EOL>
+21-06-28 20:32:57 >> Date: Mon, 28 Jun 2021 20:32:57 +0200<EOL>
+21-06-28 20:32:57 >> To: pierre.hardy1999@gmail.com<EOL>
+21-06-28 20:32:57 >> Subject: Activation du compte<EOL>
+21-06-28 20:32:57 >> From: brousselicorne@gmail.com<EOL>
+21-06-28 20:32:57 >> <EOL>
+21-06-28 20:32:57 >> <h2>BonjourLeBelgeDuTurfu,</h2> <EOL>
+21-06-28 20:32:57 >>                  <p>votre compte a bien été crée, veuillez cliquez sur le lien ci-dessous pour activer votre compte !</p><EOL>
+21-06-28 20:32:57 >>                  <a href="localhost/activation.php?user=<?=$login?>&clef=<?=$clef?>" target="_blank">Activer votre compte !</a><EOL>
+21-06-28 20:32:57 >> .<EOL>
+21-06-28 20:32:58 << 250 2.0.0 OK  1624905178 yd25sm7193846ejb.114 - gsmtp<EOL>
+21-06-28 20:32:58 >> QUIT<EOL>
+21-06-28 20:32:58 << 221 2.0.0 closing connection yd25sm7193846ejb.114 - gsmtp<EOL>
+21-06-28 20:32:58 ** Disconnecting from smtp.gmail.com:587
+21-06-28 20:32:58 ** Disconnected.
+21-06-28 20:32:58 ** Disconnected.
+21-06-28 21:25:40 ** --- MESSAGE BEGIN ---
+21-06-28 21:25:40 ** To: pierre.hardy1999@gmail.com
+21-06-28 21:25:40 ** Subject: Calendrier des anniversaires pour Août
+21-06-28 21:25:40 ** Content-type: text/html; charset=iso-8859-1
+21-06-28 21:25:40 ** 
+21-06-28 21:25:40 ** 
+21-06-28 21:25:40 **     <html>
+21-06-28 21:25:40 **      <head>
+21-06-28 21:25:40 **       <title>Calendrier des anniversaires pour Août</title>
+21-06-28 21:25:40 **      </head>
+21-06-28 21:25:40 **      <body>
+21-06-28 21:25:40 **       <p>Voici les anniversaires à venir au mois d'Août !</p>
+21-06-28 21:25:40 **       <table>
+21-06-28 21:25:40 **        <tr>
+21-06-28 21:25:40 **         <th>Personne</th><th>Jour</th><th>Mois</th><th>Année</th>
+21-06-28 21:25:40 **        </tr>
+21-06-28 21:25:40 **        <tr>
+21-06-28 21:25:40 **         <td>Josiane</td><td>3</td><td>Août</td><td>1970</td>
+21-06-28 21:25:40 **        </tr>
+21-06-28 21:25:40 **        <tr>
+21-06-28 21:25:40 **         <td>Emma</td><td>26</td><td>Août</td><td>1973</td>
+21-06-28 21:25:40 **        </tr>
+21-06-28 21:25:40 **       </table>
+21-06-28 21:25:40 **      </body>
+21-06-28 21:25:40 **     </html>
+21-06-28 21:25:40 **     
+21-06-28 21:25:40 ** --- MESSAGE END ---
+21-06-28 21:25:40 ** Connecting to smtp.gmail.com:587
+21-06-28 21:25:41 ** Connected.
+21-06-28 21:25:41 << 220 smtp.gmail.com ESMTP u21sm8437310edv.20 - gsmtp<EOL>
+21-06-28 21:25:41 >> EHLO Pierre-pc<EOL>
+21-06-28 21:25:41 << 250-smtp.gmail.com at your service, [213.49.162.166]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-STARTTLS<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21-06-28 21:25:41 ** Authenticating as brousselicorne@gmail.com
+21-06-28 21:25:41 >> STARTTLS<EOL>
+21-06-28 21:25:41 << 220 2.0.0 Ready to start TLS<EOL>
+21-06-28 21:25:41 >> EHLO Pierre-pc<EOL>
+21-06-28 21:25:41 << 250-smtp.gmail.com at your service, [213.49.162.166]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21-06-28 21:25:41 >> AUTH LOGIN<EOL>
+21-06-28 21:25:41 << 334 VXNlcm5hbWU6<EOL>
+21-06-28 21:25:41 >> YnJvdXNzZWxpY29ybmVAZ21haWwuY29t<EOL>
+21-06-28 21:25:41 << 334 UGFzc3dvcmQ6<EOL>
+21-06-28 21:25:41 >> Zm43WGZuN1hmbjdYZm4=<EOL>
+21-06-28 21:25:41 << 235 2.7.0 Accepted<EOL>
+21-06-28 21:25:41 >> MAIL FROM: <brousselicorne@gmail.com><EOL>
+21-06-28 21:25:41 << 250 2.1.0 OK u21sm8437310edv.20 - gsmtp<EOL>
+21-06-28 21:25:41 >> RCPT TO: <pierre.hardy1999@gmail.com><EOL>
+21-06-28 21:25:41 << 250 2.1.5 OK u21sm8437310edv.20 - gsmtp<EOL>
+21-06-28 21:25:41 >> DATA<EOL>
+21-06-28 21:25:41 << 354  Go ahead u21sm8437310edv.20 - gsmtp<EOL>
+21-06-28 21:25:41 >> Date: Mon, 28 Jun 2021 21:25:41 +0200<EOL>
+21-06-28 21:25:41 >> To: pierre.hardy1999@gmail.com<EOL>
+21-06-28 21:25:41 >> Subject: Calendrier des anniversaires pour Août<EOL>
+21-06-28 21:25:41 >> Content-type: text/html; charset=iso-8859-1<EOL>
+21-06-28 21:25:41 >> <EOL>
+21-06-28 21:25:41 >> <EOL>
+21-06-28 21:25:41 >>     <html><EOL>
+21-06-28 21:25:41 >>      <head><EOL>
+21-06-28 21:25:41 >>       <title>Calendrier des anniversaires pour Août</title><EOL>
+21-06-28 21:25:41 >>      </head><EOL>
+21-06-28 21:25:41 >>      <body><EOL>
+21-06-28 21:25:41 >>       <p>Voici les anniversaires à venir au mois d'Août !</p><EOL>
+21-06-28 21:25:41 >>       <table><EOL>
+21-06-28 21:25:41 >>        <tr><EOL>
+21-06-28 21:25:41 >>         <th>Personne</th><th>Jour</th><th>Mois</th><th>Année</th><EOL>
+21-06-28 21:25:41 >>        </tr><EOL>
+21-06-28 21:25:41 >>        <tr><EOL>
+21-06-28 21:25:41 >>         <td>Josiane</td><td>3</td><td>Août</td><td>1970</td><EOL>
+21-06-28 21:25:41 >>        </tr><EOL>
+21-06-28 21:25:41 >>        <tr><EOL>
+21-06-28 21:25:41 >>         <td>Emma</td><td>26</td><td>Août</td><td>1973</td><EOL>
+21-06-28 21:25:41 >>        </tr><EOL>
+21-06-28 21:25:41 >>       </table><EOL>
+21-06-28 21:25:41 >>      </body><EOL>
+21-06-28 21:25:41 >>     </html><EOL>
+21-06-28 21:25:41 >>     <EOL>
+21-06-28 21:25:41 >> .<EOL>
+21-06-28 21:25:42 << 250 2.0.0 OK  1624908342 u21sm8437310edv.20 - gsmtp<EOL>
+21-06-28 21:25:42 >> QUIT<EOL>
+21-06-28 21:25:42 << 221 2.0.0 closing connection u21sm8437310edv.20 - gsmtp<EOL>
+21-06-28 21:25:42 ** Disconnecting from smtp.gmail.com:587
+21-06-28 21:25:42 ** Disconnected.
+21-06-28 21:25:42 ** Disconnected.
+21-06-28 21:35:26 ** --- MESSAGE BEGIN ---
+21-06-28 21:35:26 ** To: elgreko911@gmail.com
+21-06-28 21:35:26 ** Subject: Activation du compte
+21-06-28 21:35:26 ** Content-type: text/html; charset=iso-8859-1
+21-06-28 21:35:26 ** 
+21-06-28 21:35:26 ** 
+21-06-28 21:35:26 **                     <!DOCTYPE html>
+21-06-28 21:35:26 **                     <html lang="fr">
+21-06-28 21:35:26 **                     <body>
+21-06-28 21:35:26 **                         <h2>Bonjourelgrekos </h2>
+21-06-28 21:35:26 **                         <p>Votre compte a bien été crée, il ne vous reste plus qu'à valider votre compte en cliquant sur Activer votre compte</p>
+21-06-28 21:35:26 **                         <a href="localhost/src/pages/verification.php?user=elgrekos&clef=f51b1e6f195fb65ea09e576d1d407724"></a>
+21-06-28 21:35:26 **                         <p>Á bientot sur BELGIUM VIDEO-GAMING</p>
+21-06-28 21:35:26 **                     </body>
+21-06-28 21:35:26 **                     </html>
+21-06-28 21:35:26 ** 
+21-06-28 21:35:26 **         
+21-06-28 21:35:26 ** --- MESSAGE END ---
+21-06-28 21:35:26 ** Connecting to smtp.gmail.com:587
+21-06-28 21:35:26 ** Connected.
+21-06-28 21:35:26 << 220 smtp.gmail.com ESMTP s18sm7263695ejh.12 - gsmtp<EOL>
+21-06-28 21:35:26 >> EHLO Pierre-pc<EOL>
+21-06-28 21:35:26 << 250-smtp.gmail.com at your service, [213.49.162.166]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-STARTTLS<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21-06-28 21:35:26 ** Authenticating as brousselicorne@gmail.com
+21-06-28 21:35:26 >> STARTTLS<EOL>
+21-06-28 21:35:27 << 220 2.0.0 Ready to start TLS<EOL>
+21-06-28 21:35:27 >> EHLO Pierre-pc<EOL>
+21-06-28 21:35:27 << 250-smtp.gmail.com at your service, [213.49.162.166]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21-06-28 21:35:27 >> AUTH LOGIN<EOL>
+21-06-28 21:35:27 << 334 VXNlcm5hbWU6<EOL>
+21-06-28 21:35:27 >> YnJvdXNzZWxpY29ybmVAZ21haWwuY29t<EOL>
+21-06-28 21:35:27 << 334 UGFzc3dvcmQ6<EOL>
+21-06-28 21:35:27 >> Zm43WGZuN1hmbjdYZm4=<EOL>
+21-06-28 21:35:27 << 235 2.7.0 Accepted<EOL>
+21-06-28 21:35:27 >> MAIL FROM: <brousselicorne@gmail.com><EOL>
+21-06-28 21:35:27 << 250 2.1.0 OK s18sm7263695ejh.12 - gsmtp<EOL>
+21-06-28 21:35:27 >> RCPT TO: <elgreko911@gmail.com><EOL>
+21-06-28 21:35:27 << 250 2.1.5 OK s18sm7263695ejh.12 - gsmtp<EOL>
+21-06-28 21:35:27 >> DATA<EOL>
+21-06-28 21:35:27 << 354  Go ahead s18sm7263695ejh.12 - gsmtp<EOL>
+21-06-28 21:35:27 >> Date: Mon, 28 Jun 2021 21:35:27 +0200<EOL>
+21-06-28 21:35:27 >> To: elgreko911@gmail.com<EOL>
+21-06-28 21:35:27 >> Subject: Activation du compte<EOL>
+21-06-28 21:35:27 >> Content-type: text/html; charset=iso-8859-1<EOL>
+21-06-28 21:35:27 >> <EOL>
+21-06-28 21:35:27 >> <EOL>
+21-06-28 21:35:27 >>                     <!DOCTYPE html><EOL>
+21-06-28 21:35:27 >>                     <html lang="fr"><EOL>
+21-06-28 21:35:27 >>                     <body><EOL>
+21-06-28 21:35:27 >>                         <h2>Bonjourelgrekos </h2><EOL>
+21-06-28 21:35:27 >>                         <p>Votre compte a bien été crée, il ne vous reste plus qu'à valider votre compte en cliquant sur Activer votre compte</p><EOL>
+21-06-28 21:35:27 >>                         <a href="localhost/src/pages/verification.php?user=elgrekos&clef=f51b1e6f195fb65ea09e576d1d407724"></a><EOL>
+21-06-28 21:35:27 >>                         <p>Á bientot sur BELGIUM VIDEO-GAMING</p><EOL>
+21-06-28 21:35:27 >>                     </body><EOL>
+21-06-28 21:35:27 >>                     </html><EOL>
+21-06-28 21:35:27 >> <EOL>
+21-06-28 21:35:27 >>         <EOL>
+21-06-28 21:35:27 >> .<EOL>
+21-06-28 21:35:27 << 250 2.0.0 OK  1624908927 s18sm7263695ejh.12 - gsmtp<EOL>
+21-06-28 21:35:27 >> QUIT<EOL>
+21-06-28 21:35:27 << 221 2.0.0 closing connection s18sm7263695ejh.12 - gsmtp<EOL>
+21-06-28 21:35:27 ** Disconnecting from smtp.gmail.com:587
+21-06-28 21:35:27 ** Disconnected.
+21-06-28 21:35:27 ** Disconnected.
+21-06-28 21:38:03 ** --- MESSAGE BEGIN ---
+21-06-28 21:38:03 ** To: elgreko911@gmail.com
+21-06-28 21:38:03 ** Subject: Activation du compte
+21-06-28 21:38:03 ** Content-type: text/html; charset=utf8
+21-06-28 21:38:03 ** 
+21-06-28 21:38:03 ** 
+21-06-28 21:38:03 **                     <!DOCTYPE html>
+21-06-28 21:38:03 **                     <html lang="fr">
+21-06-28 21:38:03 **                     <body>
+21-06-28 21:38:03 **                         <h2>Bonjour elgrekos </h2><br>
+21-06-28 21:38:03 **                         <p>Votre compte a bien été crée, il ne vous reste plus qu'à valider votre compte en cliquant sur Activer votre compte</p><br>
+21-06-28 21:38:03 **                         <a href="localhost/src/pages/verification.php?user=elgrekos&clef=f53cc5165ef32a00273329c162850a90">Activez votre compte</a><br>
+21-06-28 21:38:03 **                         <p>Á bientot sur BELGIUM VIDEO-GAMING</p>
+21-06-28 21:38:03 **                     </body>
+21-06-28 21:38:03 **                     </html>
+21-06-28 21:38:03 ** 
+21-06-28 21:38:03 **         
+21-06-28 21:38:03 ** --- MESSAGE END ---
+21-06-28 21:38:04 ** Connecting to smtp.gmail.com:587
+21-06-28 21:38:04 ** Connected.
+21-06-28 21:38:04 << 220 smtp.gmail.com ESMTP q5sm7120981ejc.117 - gsmtp<EOL>
+21-06-28 21:38:04 >> EHLO Pierre-pc<EOL>
+21-06-28 21:38:04 << 250-smtp.gmail.com at your service, [213.49.162.166]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-STARTTLS<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21-06-28 21:38:04 ** Authenticating as brousselicorne@gmail.com
+21-06-28 21:38:04 >> STARTTLS<EOL>
+21-06-28 21:38:04 << 220 2.0.0 Ready to start TLS<EOL>
+21-06-28 21:38:04 >> EHLO Pierre-pc<EOL>
+21-06-28 21:38:04 << 250-smtp.gmail.com at your service, [213.49.162.166]<EOL>250-SIZE 35882577<EOL>250-8BITMIME<EOL>250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH<EOL>250-ENHANCEDSTATUSCODES<EOL>250-PIPELINING<EOL>250-CHUNKING<EOL>250 SMTPUTF8<EOL>
+21-06-28 21:38:04 >> AUTH LOGIN<EOL>
+21-06-28 21:38:04 << 334 VXNlcm5hbWU6<EOL>
+21-06-28 21:38:04 >> YnJvdXNzZWxpY29ybmVAZ21haWwuY29t<EOL>
+21-06-28 21:38:04 << 334 UGFzc3dvcmQ6<EOL>
+21-06-28 21:38:04 >> Zm43WGZuN1hmbjdYZm4=<EOL>
+21-06-28 21:38:04 << 235 2.7.0 Accepted<EOL>
+21-06-28 21:38:04 >> MAIL FROM: <brousselicorne@gmail.com><EOL>
+21-06-28 21:38:04 << 250 2.1.0 OK q5sm7120981ejc.117 - gsmtp<EOL>
+21-06-28 21:38:04 >> RCPT TO: <elgreko911@gmail.com><EOL>
+21-06-28 21:38:04 << 250 2.1.5 OK q5sm7120981ejc.117 - gsmtp<EOL>
+21-06-28 21:38:04 >> DATA<EOL>
+21-06-28 21:38:04 << 354  Go ahead q5sm7120981ejc.117 - gsmtp<EOL>
+21-06-28 21:38:04 >> Date: Mon, 28 Jun 2021 21:38:04 +0200<EOL>
+21-06-28 21:38:04 >> To: elgreko911@gmail.com<EOL>
+21-06-28 21:38:04 >> Subject: Activation du compte<EOL>
+21-06-28 21:38:04 >> Content-type: text/html; charset=utf8<EOL>
+21-06-28 21:38:04 >> <EOL>
+21-06-28 21:38:04 >> <EOL>
+21-06-28 21:38:04 >>                     <!DOCTYPE html><EOL>
+21-06-28 21:38:04 >>                     <html lang="fr"><EOL>
+21-06-28 21:38:04 >>                     <body><EOL>
+21-06-28 21:38:04 >>                         <h2>Bonjour elgrekos </h2><br><EOL>
+21-06-28 21:38:04 >>                         <p>Votre compte a bien été crée, il ne vous reste plus qu'à valider votre compte en cliquant sur Activer votre compte</p><br><EOL>
+21-06-28 21:38:04 >>                         <a href="localhost/src/pages/verification.php?user=elgrekos&clef=f53cc5165ef32a00273329c162850a90">Activez votre compte</a><br><EOL>
+21-06-28 21:38:04 >>                         <p>Á bientot sur BELGIUM VIDEO-GAMING</p><EOL>
+21-06-28 21:38:04 >>                     </body><EOL>
+21-06-28 21:38:04 >>                     </html><EOL>
+21-06-28 21:38:04 >> <EOL>
+21-06-28 21:38:04 >>         <EOL>
+21-06-28 21:38:04 >> .<EOL>
+21-06-28 21:38:05 << 250 2.0.0 OK  1624909085 q5sm7120981ejc.117 - gsmtp<EOL>
+21-06-28 21:38:05 >> QUIT<EOL>
+21-06-28 21:38:05 << 221 2.0.0 closing connection q5sm7120981ejc.117 - gsmtp<EOL>
+21-06-28 21:38:05 ** Disconnecting from smtp.gmail.com:587
+21-06-28 21:38:05 ** Disconnected.
+21-06-28 21:38:05 ** Disconnected.

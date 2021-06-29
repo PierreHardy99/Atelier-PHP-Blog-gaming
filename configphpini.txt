@@ -1,0 +1,14 @@
+[mail function]
+; For Win32 only.
+; http://php.net/smtp
+SMTP = smtp.gmail.com
+; http://php.net/smtp-port
+smtp_port = 587
+
+; For Win32 only.
+; http://php.net/sendmail-from
+sendmail_from = brousselicorne@gmail.com
+
+; For Unix only.  You may supply arguments as well (default: "sendmail -t -i").
+; http://php.net/sendmail-path
+sendmail_path = D:/wamp64/sendmail/sendmail.exe -t
