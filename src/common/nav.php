@@ -6,6 +6,7 @@
         header('location: ./index.php');
         exit();
     }
+    
 ?>
 <header class="bg">
     <div>
@@ -13,13 +14,26 @@
     </div>
     <nav>
         <ul>
+            <?php
+
+                $dsn = "mysql:host=localhost;dbname=blog-gaming;charset=utf8";
+
+                $pdo = new PDO($dsn,"root","");
+
+                $requete = $pdo->query('SELECT * FROM hardware') or die(print_r($requete->errorInfo(), TRUE));
             
-            <li><a href="../../src/pages/index.php">PS5</a></li>
-            <li><a href="../../src/pages/index.php">PS4</a></li>
-            <li><a href="../../src/pages/index.php">XBOX ONE</a></li>
-            <li><a href="../../src/pages/index.php">SWITCH</a></li>
-            <li><a href="../../src/pages/index.php">PC</a></li>
-            <li><a href="../../src/pages/index.php">VR</a></li>
+                $donnees = $requete->fetchAll();
+
+                $requete->closeCursor();
+
+                foreach ($donnees as $value) {
+                ?>
+                    <li><a href="../../src/common/pageCategorie.php?console=<?=$value['hardId']?>"><?=$value['console']?></a></li>
+                <?php
+                }
+                
+            ?>
+                
         </ul>
     </nav>
     <div>

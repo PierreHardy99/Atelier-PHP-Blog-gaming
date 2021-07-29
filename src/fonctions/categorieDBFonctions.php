@@ -13,6 +13,23 @@
         return $listeHardCategorie;
     }
 
+    function getHardName($console){
+        $pdo = connectDB();
+        $requete = $pdo->prepare('SELECT console FROM hardware WHERE hardId = ?');
+        $requete->execute(array($console)) or die(print_r($requete->errorInfo(), TRUE));
+
+        // Distribuer les données recue dans une variable tableau
+        while ($données = $requete->fetch()) {
+            $listeHardName[] = $données;
+        }
+        $requete->closeCursor();
+
+        if (isset($listeHardName)) {
+            return $listeHardName;
+        }
+
+    }
+
     // Ajouter une console
     function addHardCategorie($console){
         $pdo = connectDB();

@@ -27,7 +27,7 @@ function getAvatar($userId){
 
 function getCommentaire(){
     $pdo = connectDB();
-    $requete = $pdo->query('SELECT * FROM commentaires c') or die(print_r($requete->errorInfo(), TRUE));
+    $requete = $pdo->query('SELECT * FROM commentaires') or die(print_r($requete->errorInfo(), TRUE));
     if ($requete == false) {
         echo 'Erreur dans la recherche';
         exit();

@@ -4,7 +4,6 @@
         $articleId = $_GET['id'];
     }
 
-
     if (isset($_POST['commentaire']) && !empty($_POST['commentaire'])) {
         if (isset($_SESSION["user"]) && $_SESSION["connecté"] == true) {
             $userId = $_SESSION['user']['id'];
@@ -62,29 +61,29 @@
     </section>
 
     <section>
-    <?php
-        if (isset($listeCommentaire)) {
-            foreach ($listeCommentaire as $value) {
-                if ($value['auteurId'] != null) {
-                    $avatar = getAvatar($value['auteurId']);
-                } else {
-                    $avatar = '../../src/img/site/defaut_avatar.png';
+        <?php
+            if (isset($listeCommentaire)) {
+                foreach ($listeCommentaire as $value) {
+                    if ($value['auteurId'] != null) {
+                        $avatar = getAvatar($value['auteurId']);             
+                    } else {
+                        $avatar = '../../src/img/site/defaut_avatar.png';
+                    }
+                    ?>
+                        <div id="commentaire" class="afficherCommentaire">
+                            <div class="enteteCommentaire">
+                                <img src="<?=$avatar?>" class="commentaireImg" alt="<?=$value['pseudo']?> - AVATAR" width="75px" height="75px">
+                                <p class="pt-1 pl-1"><?=$value['pseudo']?> <br> <?=$value['dateCommentaire']?> </p>
+                            </div>
+                            <div class="contenuCommentaire">
+                                <p><?=$value['contenu']?></p>
+                            </div>
+                
+                        </div>
+                
+                    <?php
                 }
-                ?>
-                    <div id="commentaire" class="afficherCommentaire">
-                        <div class="enteteCommentaire">
-                            <img src="<?=$avatar?>" class="commentaireImg" alt="<?=$value['pseudo']?> - AVATAR" width="75px" height="75px">
-                            <p class="pt-1 pl-1"><?=$value['pseudo']?> <br> <?=$value['dateCommentaire']?> </p>
-                        </div>
-                        <div class="contenuCommentaire">
-                            <p><?=$value['contenu']?></p>
-                        </div>
-
-                    </div>
-
-                <?php
             }
-        }
-    ?>
+        ?>
     
     </section>

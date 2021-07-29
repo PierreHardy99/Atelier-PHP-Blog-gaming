@@ -81,6 +81,20 @@
         return $listeArticle;
     }
 
+    function getArticleByHard($console){
+        $pdo = connectDB();
+        $requete = $pdo->prepare('SELECT * FROM articles WHERE hardId = ?');
+        $requete->execute(array($console)) or die(print_r($requete->errorInfo(), TRUE));
+
+        while ($données = $requete->fetch()) {
+            $listeArticleByHard[] = $données;
+        }
+        $requete->closeCursor();
+        if (isset($listeArticleByHard)) {
+            return $listeArticleByHard;
+        }
+    }
+
     function getArticleForAccount($id){
         $pdo = connectDB();
         $requete = $pdo->prepare('SELECT * from articles WHERE auteurId = ?');

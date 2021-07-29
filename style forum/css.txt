@@ -1,0 +1,5 @@
+.username--style5 {
+    color: orange;
+    text-shadow: 0 0 3px #ffa500;
+    background: url(https://i.imgur.com/Ak4d9pH.gif);
+}
