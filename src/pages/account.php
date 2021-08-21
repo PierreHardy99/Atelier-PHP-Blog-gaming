@@ -47,7 +47,7 @@
             <table>
                 <tr>
                     <td>pseudo:</td>
-                    <td><?= $_SESSION["user"]["login"] ?></td>
+                    <td class="username--style5"><?= $_SESSION["user"]["login"] ?></td>
                 </tr>
                 <tr>
                     <td>Nom:</td>

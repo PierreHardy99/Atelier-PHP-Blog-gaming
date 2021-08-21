@@ -399,3 +399,9 @@ input[type=file]::-webkit-file-upload-button {
     margin-bottom: 1rem;
 }
 
+.username--style5 {
+    color: Red;
+    text-shadow: 0 0 3px #ffa500;
+    background: url('../../src/img/site/Ak4d9pH.gif');
+}
+

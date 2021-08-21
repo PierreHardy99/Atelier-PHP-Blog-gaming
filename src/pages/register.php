@@ -59,6 +59,7 @@
             // boolean de contrôle
             $mdpNoOk = true;
             //  j'active une seession pour indiquer que les mdp sont noOk
+            
             // Je recharge ma page
             header("location: ../../src/pages/register.php");
             exit();
@@ -78,6 +79,7 @@
                 exit();
             }
         }
+        $requete->closeCursor();
 
         // Check mail
         $requete = $pdo->prepare("SELECT COUNT(*) AS x
@@ -92,6 +94,8 @@
                 exit();
             }
         }
+
+        $requete->closeCursor();
 
         // Verifier si user a envoyé photo et agit en conséquence
         if (isset($_FILES["fichier"]) && $_FILES["fichier"]["error"] == 0) {
