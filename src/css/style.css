@@ -10,6 +10,14 @@
     background-color: #e6e6e6;
 }
 
+.erreur{
+    color: rgb(170, 46, 46);
+}
+
+.success{
+    color: rgb(39, 39, 151);
+}
+
 /* header */
 header{
     padding: 0.5rem;

@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="../../src/css/style.css">
     <link rel="stylesheet" href="../../src/css/generique.css">
     <link rel="icon" type="image/png" sizes="16x16" href="../../src/img/site/logo-150px.png">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;600;700&family=Poppins:wght@100;200;300;500;700&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;600;700&family=Poppins:wght@100;200;300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://kit.fontawesome.com/83f4286022.js" crossorigin="anonymous"></script>
     <?php 
         if (isset($tinymce) && $tinymce == true) {

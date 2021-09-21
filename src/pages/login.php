@@ -20,10 +20,10 @@
     <?php 
         if (isset($_GET["erreur"])) {
             ?>
-                <h2><?=$_GET["erreur"];?></h2>
+                <h2 class="animate__animated animate__shakeX erreur"><?=$_GET["erreur"];?></h2>
             <?php
         } else if (isset($_GET['success'])) {
-            echo '<h2>'.$_GET["success"].'</h2>';
+            echo '<h2 class="animate__animated animate__tada success">'.$_GET["success"].'</h2>';
         }
     
     ?>
