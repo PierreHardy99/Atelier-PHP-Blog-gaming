@@ -87,13 +87,14 @@
                                     WHERE email = ?");
         $requete->execute(array($email));
 
-        while ($result = $requete->fetch()) {
-            if ($result["x"] != 0) {
-                $_SESSION["msgEmail"] = true;
-                header("location: ../../src/pages/register.php");
-                exit();
-            }
-        }
+        // verif si mail exist
+        // while ($result = $requete->fetch()) {
+        //     if ($result["x"] != 0) {
+        //         $_SESSION["msgEmail"] = true;
+        //         header("location: ../../src/pages/register.php");
+        //         exit();
+        //     }
+        // }
 
         $requete->closeCursor();
 
@@ -120,15 +121,17 @@
         $headers = 'Content-type: text/html; charset=utf8';
 
         
-        if (mail($dest,$sujet,$corp,$headers)) {
-            createUser($photo, $login, $nom, $prenom, $email, $mdpToSend, $role, $sel,$clef,$actif);
-            echo '<h2 class="animate__animated animate__tada success">Votre compte est maintenant créé, veuillez activez votre compte par le lien qui a été envoié et puis vous<a href="../../src/pages/login.php">CONNECTER</a></h2>';
-        } else {
-            echo '<h2 class="animate__animated animate__shakeX erreur">Une erreur est survenu lors de la création de votre compte, veuillez contactez un administrateur</h2>';
-        }
+        // if (mail($dest,$sujet,$corp,$headers)) {
+            
+        //     echo '<h2 class="registerOk">Votre compte est maintenant créé, veuillez activez votre compte par le lien qui a été envoié et puis vous<a href="../../src/pages/login.php">CONNECTER</a></h2>';
+        // } else {
+        //     echo '<h2 class="registerOk">Une erreur est survenu lors de la création de votre compte, veuillez contactez un administrateur</h2>';
+        // }
         
 
-
+        createUser($photo, $login, $nom, $prenom, $email, $mdpToSend, $role, $sel,$clef,$actif);
+        // echo '<h2 class="registerOk">Votre compte est maintenant créé, veuillez activez votre compte par le lien qui a été envoié et puis vous<a href="../../src/pages/login.php">CONNECTER</a></h2>';
+        echo '<h2 class="registerOk">Votre compte est maintenant créé, veuillez vous<a href="../../src/pages/login.php">CONNECTER</a></h2>';
         // Tout s'est bien passé, invite user à se connecter
 ?>
     

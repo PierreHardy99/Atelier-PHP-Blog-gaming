@@ -47,7 +47,30 @@
             <table>
                 <tr>
                     <td>pseudo:</td>
-                    <td class="username--style5"><?= $_SESSION["user"]["login"] ?></td>
+                    <?php 
+                        switch ($_SESSION['user']['role']) {
+                            case 'admin':
+                                ?>
+                                    <td><span class="userStyle colorAdmin"><?=$_SESSION["user"]["login"]?></span></td>
+                                <?php
+                                break;
+                            case 'moderateur':
+                                ?>
+                                    <td><span class="userStyle colorModo"><?=$_SESSION["user"]["login"]?></span></td>
+                                <?php
+                                break;
+                            case 'auteur':
+                                ?>
+                                    <td><span class="userStyle colorAuteur"><?=$_SESSION["user"]["login"]?></span></td>
+                                <?php
+                                break;
+                            case 'membre':
+                                ?>
+                                    <td><span class="userStyle colorMembre"><?=$_SESSION["user"]["login"]?></span></td>
+                                <?php
+                                break;
+                        }
+                    ?>
                 </tr>
                 <tr>
                     <td>Nom:</td>
@@ -59,7 +82,30 @@
                 </tr>
                 <tr>
                     <td>Statut:</td>
-                    <td><?= $_SESSION["user"]["role"] ?></td>
+                    <?php 
+                        switch ($_SESSION['user']['role']) {
+                            case 'admin':
+                                ?>
+                                    <td><span class="userStyle colorAdmin"><?=$_SESSION["user"]["role"]?></span></td>
+                                <?php
+                                break;
+                            case 'moderateur':
+                                ?>
+                                    <td><span class="userStyle colorModo"><?=$_SESSION["user"]["role"]?></span></td>
+                                <?php
+                                break;
+                            case 'auteur':
+                                ?>
+                                    <td><span class="userStyle colorAuteur"><?=$_SESSION["user"]["role"]?></span></td>
+                                <?php
+                                break;
+                            case 'membre':
+                                ?>
+                                    <td><span class="userStyle colorMembre"><?=$_SESSION["user"]["role"]?></span></td>
+                                <?php
+                                break;
+                        }
+                    ?>
                 </tr>
             </table>
         </div>

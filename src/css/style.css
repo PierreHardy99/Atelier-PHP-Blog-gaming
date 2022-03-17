@@ -10,14 +10,6 @@
     background-color: #e6e6e6;
 }
 
-.erreur{
-    color: rgb(170, 46, 46);
-}
-
-.success{
-    color: rgb(39, 39, 151);
-}
-
 /* header */
 header{
     padding: 0.5rem;
@@ -407,9 +399,52 @@ input[type=file]::-webkit-file-upload-button {
     margin-bottom: 1rem;
 }
 
-.username--style5 {
-    color: Red;
-    text-shadow: 0 0 3px #ffa500;
+/*STYLE ACCOUNT*/
+.userStyle{
     background: url('../../src/img/site/Ak4d9pH.gif');
+}
+
+.colorAdmin{
+    text-shadow: 0 0 3px #ffa500;
+    color: orange;
+}
+
+.colorModo{
+    text-shadow: 0 0 3px #6548c7;
+    color: #6548c7;
+}
+
+.colorAuteur{
+    text-shadow: 0 0 3px #7cd162;
+    color: #7cd162;
+}
+
+.colorMembre{
+    text-shadow: 0 0 3px #585c57;
+    color: #585c57; 
+}
+
+/*Membres*/
+#member{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 13rem;
+}
+#member a {
+    text-decoration: none;
+}
+#member .card{
+    border: 1px solid black;
+    border-radius: 10%;
+    box-shadow: 10px 5px 5px grey;
+}
+
+.card:hover{
+    background-color: grey;
+    transition: 0.3s;
+}
+
+#member .card .infoMember{
+    text-align: center;
 }
 

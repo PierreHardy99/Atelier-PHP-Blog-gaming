@@ -51,6 +51,7 @@
         ?>
                 <ul>
                     <li><a href="../../src/pages/account.php?userId=<?=$_SESSION['user']['id']?>"><i class="fas fa-user"></i> Mon Compte</a></li>
+                    <li><a href="../../src/pages/membres.php"><i class="fas fa-users"></i> Membres</a></li>
                     <li><a href="../../index.php?deconnect=true"><i class="fas fa-user-alt-slash"></i> Déconnecter</a></li>
 
                     <?php        
